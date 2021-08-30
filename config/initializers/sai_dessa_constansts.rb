@@ -6,7 +6,7 @@ SAIDESSA_PHASES = {
   },
   second_phase: {
     categories: ["hard_skills", "soft_skills", "strong_weak_points"],
-    min_score: 10,
+    min_score: 3,
     introduction: 'https://www.youtube.com/watch?v=ScMzIvxBSi4'
   }
 }
