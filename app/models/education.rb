@@ -1,3 +1,3 @@
 class Education < ApplicationRecord
-  validates :content, :category, presence: true
+  validates :content_url, :category, presence: true
 end
