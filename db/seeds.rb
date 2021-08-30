@@ -27,7 +27,6 @@ end
 
 User.all.each do |user|
   SAIDESSA_PHASES[:first_phase][:categories][0...-1].each do |category|
-    puts category
     temp = user.score
     temp[category] = calculo_media(category, user)
     user.score = temp
