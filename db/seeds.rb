@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+
+SAIDESSA_PHASES[:first_phase][:categories][0...-1].each do |category|
+  5.times do
+    Question.create(content: Faker::TvShows::HowIMetYourMother.quote, category: category, right_answer: [1, 5].sample)
+  end
+end
+
+SAIDESSA_PHASES[:first_phase][:categories][0...-1].each do |category|
+  Education.create(content_url: "https://www.youtube.com/watch?v=hnp1pt8biD4", category: category)
+end
