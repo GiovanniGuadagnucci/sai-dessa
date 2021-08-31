@@ -16,6 +16,10 @@ class User < ApplicationRecord
     end
   end
 
+  def undone_categories
+    score[current_phase].select { |_category, value| value < 80 }.keys
+  end
+
   private
 
   def user_score
