@@ -1,4 +1,4 @@
-SAIDESSA_PHASES[:first_phase][:categories][0...-1].each do |category|
+SD["first_phase"]["categories"][0...-1].each do |category|
   5.times do
     Question.create(content: Faker::TvShows::HowIMetYourMother.quote, category: category, right_answer: [1, 5].sample)
   end
@@ -26,10 +26,16 @@ def calculo_media(category, user)
 end
 
 User.all.each do |user|
-  SAIDESSA_PHASES[:first_phase][:categories][0...-1].each do |category|
-    temp = user.score
+  SD["first_phase"]["categories"][0...-1].each do |category|
+    temp = user.score["first_phase"]
     temp[category] = calculo_media(category, user)
-    user.score = temp
+    user.score["first_phase"] = temp
     user.save
   end
 end
+
+
+# a.update(demographic: {})
+# temp  = a.jasonb
+# temp[key] = value
+# a.update(demographic: temp)
