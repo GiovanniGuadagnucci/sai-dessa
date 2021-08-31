@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :show]
 
   get '/fase', to: 'pages#fase'
+  get '/education', to: 'educations#index'
 end
