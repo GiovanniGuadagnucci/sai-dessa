@@ -15,7 +15,7 @@ User.all.each do |user|
   end
 end
 
-def calculo_media(category, user)
+def avg_score(category, user)
   answers = Answer.joins(:question).where('questions.category = ? AND answers.user_id = ?', category, user.id)
   scores = answers.map do |answer|
     resposta_certa = answer.question.right_answer
@@ -28,12 +28,11 @@ end
 User.all.each do |user|
   SD["first_phase"]["categories"][0...-1].each do |category|
     temp = user.score["first_phase"]
-    temp[category] = calculo_media(category, user)
+    temp[category] = avg_score(category, user)
     user.score["first_phase"] = temp
     user.save
   end
 end
-
 
 # a.update(demographic: {})
 # temp  = a.jasonb
