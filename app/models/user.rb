@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def user_undone_oath
-    score[current_phase].select { |category, value| category == "oath" && value > 80 }.keys
+    score[current_phase].select { |category, value| category == "oath" && value < 80 }.keys
   end
 
   private

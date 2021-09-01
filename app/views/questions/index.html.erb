@@ -4,4 +4,4 @@
   <p><%= question.content %></p>
 <% end %>
 
-<%= link_to "Submit para o meio", meio_path, class: "btn btn-primary" %>
+<%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
