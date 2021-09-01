@@ -13,24 +13,9 @@ User.all.each do |user|
   Question.all.each do |question|
     Answer.create(question: question, user: user, user_answer: rand(1..5))
   end
-end
 
-def avg_score(category, user)
-  answers = Answer.joins(:question).where('questions.category = ? AND answers.user_id = ?', category, user.id)
-  scores = answers.map do |answer|
-    resposta_certa = answer.question.right_answer
-    resposta_usuario = answer.user_answer
-    resposta_certa == 1 ? ((resposta_usuario - resposta_certa) * -20) + 100 : ((resposta_certa - resposta_usuario) * -20) + 100
-  end
-  scores.sum / scores.size
-end
-
-User.all.each do |user|
   SD["first_phase"]["categories"][0...-1].each do |category|
-    temp = user.score["first_phase"]
-    temp[category] = avg_score(category, user)
-    user.score["first_phase"] = temp
-    user.save
+    user.save_avg_score(category)
   end
 end
 

@@ -1,7 +1,9 @@
-<h1>Questions#Index</h1>
-<% @questions.each do |question| %>
-  <p><%= question.category %></p>
-  <p><%= question.content %></p>
-<% end %>
+<div class="container">
+  <h1>Questions#Index</h1>
 
-<%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
+  <% @questions.each do |question| %>
+    <%= render 'question', question: question, answer: question.find_user_answer(current_user) %>
+  <% end %>
+
+  <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
+</div>

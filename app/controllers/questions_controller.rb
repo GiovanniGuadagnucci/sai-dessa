@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [:index]
   def index
     if params[:oath]
       @questions = Question.where(category: current_user.user_undone_oath.any? ? params[:oath] : current_user.undone_categories )

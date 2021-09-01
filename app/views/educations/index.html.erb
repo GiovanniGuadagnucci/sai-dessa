@@ -1,11 +1,13 @@
 <h1>Educations#show</h1>
 <p>Find me in app/views/educations/show.html.erb</p>
 
+<% current_user.undone_categories.each { |category| current_user.save_avg_score(category) } if user_signed_in? %>
+
 <% @educations.each do |education| %>
   <iframe width="420" height="315"
   src="<%= education.content_url %>">
   </iframe>
 <% end %>
-</br>
+<br>
 
 <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
