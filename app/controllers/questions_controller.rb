@@ -1,10 +1,11 @@
 class QuestionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
   def index
-    if user_signed_in?
-      @questions = Question.where(category: current_user.undone_categories)
+    if params[:oath]
+      raise
+      @questions = Question.where(category: current_user.user_undone_oath.empty! ? params[:oath] : current_user.undone_categories )
     else
-      @questions = Question.where(category: SD["first_phase"]["categories"])
+      @questions = Question.where(category: user_signed_in? ? current_user.undone_categories : SD["first_phase"]["categories"])
     end
   end
 
