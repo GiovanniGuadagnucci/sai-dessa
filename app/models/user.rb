@@ -17,7 +17,11 @@ class User < ApplicationRecord
   end
 
   def undone_categories
-    score[current_phase].select { |_category, value| value < 80 }.keys
+    score[current_phase].reject { |category, value| category == "oath" || value >= 80 }.keys
+  end
+
+  def user_undone_oath
+    score[current_phase].select { |category, value| category == "oath" && value < 80 }.keys
   end
 
   private
@@ -25,7 +29,7 @@ class User < ApplicationRecord
   def user_score
     total_score = 0
     score.each do |_phase, categories|
-      total_score += categories.count { |category| category[1] >= 80 }
+      total_score += categories.reject { |category| category == "oath" }.count { |category| category[1] >= 80 }
     end
     total_score
   end

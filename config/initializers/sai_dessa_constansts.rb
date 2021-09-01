@@ -1,6 +1,6 @@
 SD = {
   "first_phase" => {
-    "categories" => ["self_knowledge", "personal_objectives", "personal_values", "oath"],
+    "categories" => ["self_knowledge", "personal_objectives", "personal_values"],
     "score" => 3,
     "introduction" => 'https://www.youtube.com/watch?v=ScMzIvxBSi4'
   },
