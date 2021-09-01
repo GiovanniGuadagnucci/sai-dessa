@@ -24,6 +24,19 @@ class User < ApplicationRecord
     score[current_phase].select { |category, value| category == "oath" && value < 80 }.keys
   end
 
+  def save_avg_score(category)
+    temp = score[current_phase]
+    answers = Answer.joins(:question).where('questions.category = ? AND answers.user_id = ?', category, id)
+    categ_scores = answers.map do |answer|
+      right_ansr = answer.question.right_answer
+      user_ansr = answer.user_answer
+      right_ansr == 1 ? ((user_ansr - right_ansr) * -20) + 100 : ((right_ansr - user_ansr) * -20) + 100
+    end
+    temp[category] = categ_scores.sum / categ_scores.size
+    score[current_phase] = temp
+    save
+  end
+
   private
 
   def user_score
