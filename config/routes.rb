@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_scope :user do
+    get "users/cancelar_assinatura" => "devise/registrations#unsubscribe", :as => "unsubscribe_registration"
+  end
   resources :questions, only: :show
   resources :educations, only: :show
 

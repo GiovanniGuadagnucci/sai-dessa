@@ -33,7 +33,7 @@
     </div>
   <% end %>
 
-  <p>Não tá curtindo? <%= link_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Tem certeza que deseja cancelar sua conta?" }, method: :delete, class:'text text-danger' %></p>
+  <p>Não tá curtindo? <%= link_to "Cancelar minha conta", unsubscribe_registration_path, class:'text text-danger' %></p>
 
   <%= link_to "Voltar", :back %>
 </div>
