@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_one_attached :photo
   has_many :answers, dependent: :destroy
   validates :name, presence: true
 
@@ -12,7 +13,6 @@ class User < ApplicationRecord
     when (SD['first_phase']['score']...SD['second_phase']['score']) then "second_phase"
     when (SD['second_phase']['score']...SD['third_phase']['score']) then "third_phase"
     when (SD['third_phase']['score']...SD['fourth_phase']['score']) then "fourth_phase"
-    when (SD['fourth_phase']['score']...SD['fifth_phase']['score']) then "fifth_phase"
     end
   end
 
