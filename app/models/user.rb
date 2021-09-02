@@ -33,12 +33,12 @@ class User < ApplicationRecord
     categories.keys
   end
 
-  def user_oath
-    score[current_phase]['categories']["#{current_phase}_oath"]
+  def oath_score
+    score[current_phase]["#{current_phase}_oath"]
   end
 
   def user_oath_count
-    score[current_phase]['categories']["#{current_phase}_oath_try"]
+    score[current_phase]["#{current_phase}_oath_try"]
   end
 
   def save_avg_score(category)
@@ -52,6 +52,12 @@ class User < ApplicationRecord
   def oath_try_update
     temp = score
     temp[current_phase]["#{current_phase}_oath_try"] = 1
+    update(score: temp)
+  end
+
+  def last_chance
+    temp = score
+    temp[current_phase]["#{current_phase}_oath_try"] = 2
     update(score: temp)
   end
 
