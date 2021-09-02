@@ -1,1 +1,184 @@
-// Specific CSS for your home-page
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 5fr 5fr 5fr 5fr 5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navbar navbar navbar"
+    "banner banner banner"
+    "value-proposition value-proposition value-proposition"
+    "social-prove social-prove social-prove"
+    "benefits benefits benefits"
+    "jorney jorney jorney";
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: white;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". banner-content ."
+    ". . .";
+  grid-area: banner;
+  background-color: lightcyan;
+  height: 100vh;
+}
+
+.banner-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: banner-content;
+}
+
+.value-proposition {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . ."
+    ". value-proposition-content value-proposition-image ."
+    ". . . .";
+  grid-area: value-proposition;
+  background-color: white;
+}
+
+.value-proposition-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: value-proposition-content;
+}
+
+.value-proposition-image {
+  justify-self: center;
+  align-self: center;
+  grid-area: value-proposition-image;
+}
+
+.social-prove {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . ."
+    ". social-prove-content social-prove-content ."
+    ". social-prove-cards social-prove-cards ."
+    ". . . .";
+  grid-area: social-prove;
+  background-color: lightcyan;
+}
+
+.social-prove-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: social-prove-content;
+}
+
+.social-prove-cards {
+  justify-self: center;
+  align-self: center;
+  grid-area: social-prove-cards;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . ."
+    ". benefits-content benefits-image ."
+    ". . . .";
+  grid-area: benefits;
+  background-color: white;
+}
+
+.benefits-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: benefits-content;
+}
+
+.benefits-image {
+  justify-self: center;
+  align-self: center;
+  grid-area: benefits-image;
+}
+
+.jorney {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . ."
+    ". jorney-first-content jorney-first-image ."
+    ". jorney-second-image jorney-second-content ."
+    ". jorney-third-content jorney-third-image ."
+    ". jorney-fourth-image jorney-fourth-content ."
+    ". . . .";
+  grid-area: jorney;
+  background-color: lightcyan;
+}
+
+.jorney-first-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-first-content;
+}
+
+.jorney-first-image {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-first-image;
+}
+
+.jorney-second-image {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-second-image;
+}
+
+.jorney-second-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-second-content;
+}
+
+.jorney-third-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-third-content;
+}
+
+.jorney-third-image {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-third-image;
+}
+
+.jorney-fourth-image {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-fourth-image;
+}
+
+.jorney-fourth-content {
+  justify-self: center;
+  align-self: center;
+  grid-area: jorney-fourth-content;
+}
