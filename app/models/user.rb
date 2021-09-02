@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :answers
+  has_many :answers, dependent: :destroy
   validates :name, presence: true
 
   def current_phase
@@ -16,6 +16,16 @@ class User < ApplicationRecord
     end
   end
 
+  def phase_started?
+    score[current_phase].any?
+  end
+
+  def start_phase
+    temp = score
+    temp[current_phase] = (SD[current_phase]['categories'].map { |x| [x, 0] }).to_h
+    update(score: temp)
+  end
+
   def undone_categories
     score[current_phase].reject { |category, value| category == "oath" || value >= 80 }.keys
   end
@@ -25,19 +35,24 @@ class User < ApplicationRecord
   end
 
   def save_avg_score(category)
-    temp = score[current_phase]
+    temp = score
+    user_phase = SD.find { |_k, v| v['categories'].include?(category) }.first
     answers = Answer.joins(:question).where('questions.category = ? AND answers.user_id = ?', category, id)
-    categ_scores = answers.map do |answer|
-      right_ansr = answer.question.right_answer
-      user_ansr = answer.user_answer
-      right_ansr == 1 ? ((user_ansr - right_ansr) * -20) + 100 : ((right_ansr - user_ansr) * -20) + 100
-    end
-    temp[category] = categ_scores.sum / categ_scores.size
-    score[current_phase] = temp
-    save
+    temp[user_phase][category] = categ_scores(answers).sum(&:to_i) / categ_scores(answers).size
+    update(score: temp)
   end
 
   private
+
+  def categ_scores(answers)
+    answers.map do |answer|
+      right_ansr = answer.question.right_answer
+      user_ansr = answer.user_answer
+      unless user_ansr.zero?
+        right_ansr == 1 ? ((user_ansr - right_ansr) * -20) + 100 : ((right_ansr - user_ansr) * -20) + 100
+      end
+    end
+  end
 
   def user_score
     total_score = 0
