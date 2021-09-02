@@ -1,27 +1,18 @@
 SD = {
   "first_phase" => {
-    "categories" => ["self_knowledge", "personal_objectives", "personal_values", "oath"],
-    "score" => 3,
-    "introduction" => 'https://www.youtube.com/watch?v=ScMzIvxBSi4'
+    "categories" => ["self_knowledge", "personal_objectives", "personal_values", "first_phase_oath", "first_phase_oath_try"],
+    "score" => 3
   },
   "second_phase" => {
-    "categories" => ["hard_skills", "soft_skills", "strong_weak_points"],
-    "score" => 6,
-    "introduction" => 'https://www.youtube.com/watch?v=ScMzIvxBSi4'
+    "categories" => ["hard_skills", "soft_skills", "strong_points", "week_points", "second_phase_oath", "second_phase_oath_try"],
+    "score" => 7
   },
   "third_phase" => {
-    "categories" => ["skill1", "skill2", "skill3"],
-    "score" => 9,
-    "introduction" => 'https://www.youtube.com/watch?v=ScMzIvxBSi4'
+    "categories" => ["company_culture", "company_values", "company_characteristics", "positions", "third_phase_oath", "third_phase_oath_try"],
+    "score" => 11
   },
   "fourth_phase" => {
-    "categories" => ["skill4", "skill5", "skill6"],
-    "score" => 12,
-    "introduction" => 'https://www.youtube.com/watch?v=ScMzIvxBSi4'
-  },
-  "fifth_phase" => {
-    "categories" => ["skill7", "skill8", "skill9"],
-    "score" => 15,
-    "introduction" => 'https://www.youtube.com/watch?v=ScMzIvxBSi4'
+    "categories" => ["references", "new_hard_skills", "new_soft_skills", "fourth_phase_oath", "fourth_phase_oath_try"],
+    "score" => 14
   }
 }

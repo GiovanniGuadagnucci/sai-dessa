@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home fase]
+  skip_before_action :authenticate_user!, only: %i[home]
 
   def home
   end
@@ -7,5 +7,9 @@ class PagesController < ApplicationController
   def fase
     @current_phase = user_signed_in? ? current_user.current_phase : 'first_phase'
     @educational = Education.find_by(category: "#{@current_phase}_start")
+  end
+
+  def meio
+    @motivos = current_user.undone_categories
   end
 end

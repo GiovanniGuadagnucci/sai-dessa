@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  get 'educations/show'
   devise_for :users
+
+  resources :educations, only: :show
   root to: 'pages#home'
 
-  resources :questions, only: [:index, :show]
+  resources :questions, only: [] do
+    resources :answers, only: %i[create]
+  end
+
+  resources :answers, only: [:update]
 
   get '/fase', to: 'pages#fase'
-  get '/education', to: 'educations#index'
+  get '/meio', to: 'pages#meio'
+  get '/educacao', to: 'educations#index'
+  get '/questoes', to: 'questions#index'
 end

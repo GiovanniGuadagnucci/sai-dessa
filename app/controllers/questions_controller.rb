@@ -1,10 +1,13 @@
 class QuestionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
   def index
-    if user_signed_in?
-      @questions = Question.where(category: current_user.undone_categories)
+    current_user.start_phase unless current_user.phase_started?
+
+    if params[:oath]
+      @questions = Question.where(category: "#{current_user.current_phase}_oath")
+      @next_path = { text: "Eu juro! Bora pro teste!", path: questoes_path }
     else
-      @questions = Question.where(category: SD["first_phase"]["categories"])
+      @questions = Question.where(category: current_user.undone_categories)
+      @next_path = { text: "Essas são minhas repostas", path: meio_path }
     end
   end
 
