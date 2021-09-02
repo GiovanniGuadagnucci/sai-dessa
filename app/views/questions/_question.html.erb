@@ -3,19 +3,19 @@
   <p><%= question.content %></p>
 
   <div class="d-flex answer-options">
-    <%= link_to answer_path(answer, answer: { user_answer: 1 }), remote: true, method: :patch do %>
+    <%= link_to answer_path(answer, answer: { user_answer: 1 }), method: :patch do %>
       <i class="fas fa-star"></i>
     <% end %>
-    <%= link_to answer_path(answer, answer: { user_answer: 2 }), remote: true, method: :patch do %>
+    <%= link_to answer_path(answer, answer: { user_answer: 2 }), method: :patch do %>
       <i class="fas fa-star"></i>
     <% end %>
-    <%= link_to answer_path(answer, answer: { user_answer: 3 }), remote: true, method: :patch do %>
+    <%= link_to answer_path(answer, answer: { user_answer: 3 }), method: :patch do %>
       <i class="fas fa-star"></i>
     <% end %>
-    <%= link_to answer_path(answer, answer: { user_answer: 4 }), remote: true, method: :patch do %>
+    <%= link_to answer_path(answer, answer: { user_answer: 4 }), method: :patch do %>
       <i class="fas fa-star"></i>
     <% end %>
-    <%= link_to answer_path(answer, answer: { user_answer: 5 }), remote: true, method: :patch do %>
+    <%= link_to answer_path(answer, answer: { user_answer: 5 }), method: :patch do %>
       <i class="fas fa-star"></i>
     <% end %>
   </div>
