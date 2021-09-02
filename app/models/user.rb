@@ -27,11 +27,18 @@ class User < ApplicationRecord
   end
 
   def undone_categories
-    score[current_phase].reject { |category, value| category == "oath" || value >= 80 }.keys
+    categories = score[current_phase].reject do |category, value|
+      ["#{current_phase}_oath", "#{current_phase}_oath_try"].include?(category) || value >= 80
+    end
+    categories.keys
   end
 
-  def user_undone_oath
-    score[current_phase].select { |category, value| category == "oath" && value < 80 }.keys
+  def user_oath
+    score[current_phase]['categories']["#{current_phase}_oath"]
+  end
+
+  def user_oath_count
+    score[current_phase]['categories']["#{current_phase}_oath_try"]
   end
 
   def save_avg_score(category)
@@ -39,6 +46,12 @@ class User < ApplicationRecord
     user_phase = SD.find { |_k, v| v['categories'].include?(category) }.first
     answers = Answer.joins(:question).where('questions.category = ? AND answers.user_id = ?', category, id)
     temp[user_phase][category] = categ_scores(answers).sum(&:to_i) / categ_scores(answers).size
+    update(score: temp)
+  end
+
+  def oath_try_update
+    temp = score
+    temp[current_phase]["#{current_phase}_oath_try"] = 1
     update(score: temp)
   end
 
