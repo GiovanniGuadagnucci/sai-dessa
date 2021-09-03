@@ -1,15 +1,16 @@
 <div class="container">
   <h1>Conteúdos auxiliares</h1>
   <p>Você está na <%= current_user.current_phase %></p>
-
   <div class="video-wrapper">
     <% @educations.each do |education| %>
       <p>Esse vídeo é sobre <%= education.category %></p><br>
-      <%= cl_video_tag("Placeholder_Video_wtwfy7", loop: false, controls: true,
+      <%= cl_video_tag("Placeholder_Video_iipc1v", loop: false, controls: true,
       transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
     <% end %>
     <br>
     <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
+    <% if !params[:fase].present? %>
+      <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn btn-danger"  %>
+    <% end %>
   </div>
-
 </div>
