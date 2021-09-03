@@ -24,7 +24,11 @@ class QuestionsController < ApplicationController
       current_user.last_chance
       redirect_to questoes_path
     else
-      redirect_to fim_path
+      if current_user.user_oath_count == 2
+        redirect_to fim_path
+      else
+        redirect_to fim_path({ oath: "" })
+      end
     end
   end
 end
