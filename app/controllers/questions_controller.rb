@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
       if current_user.user_oath_count == 2
         redirect_to fim_path
       else
-        redirect_to fim_path({ oath: "" })
+        redirect_to fim_path({oath: ""})
       end
     end
   end

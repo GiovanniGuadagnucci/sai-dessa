@@ -1,9 +1,10 @@
 <div class="container">
   <h1>Fim da linha, <%= current_user.name %>!</h1>
-  <% if params[:oath].present? %>
+  <% if params[:oath] %>
     <p>Eu juro sim!</p>
+    <% current_user.last_chance %>
     <%= link_to 'Voltar para questoes', questoes_path, class: 'btn btn-primary' %>
-  <% else params[:watch].present? %>
+  <% elsif params[:watch] %>
     <p>Vou assitir mais tarde!</p>
     <%= link_to 'Voltar para o educativo', educacao_path, class: 'btn btn-primary' %>
   <% end %>
