@@ -5,14 +5,14 @@ module TraducaoHelper
       'self_knowledge' => 'Autoconhecimento',
       'personal_objectives' => 'Objetivos pessoais',
       'personal_values' => 'Valores pessoais',
-      'first_phase_oat' => 'Juramento',
+      'first_phase_oath' => 'Juramento',
       'score' => 'Pontuação',
       'second_phase' => 'Segunda fase',
       'hard_skills' => 'Habilidades técnicas',
       'soft_skills' => 'Habilidade interpessoais',
       'strong_points' => 'Pontos fortes',
       'week_points' => 'Pontos fracos',
-      'second_phase_oat' => 'Juramento',
+      'second_phase_oath' => 'Juramento',
       'third_phase' => 'Terceira fase',
       'company_culture' => 'Cultura da empresa',
       'company_values' => 'Valores da empresa',
@@ -23,7 +23,7 @@ module TraducaoHelper
       'references' => 'Referências',
       'new_hard_skills' => 'Novas habilidades técnicas',
       'new_soft_skills' => 'Novas habilidades interpessoais',
-      'fourth_phase_oat' => 'Juramento'
+      'fourth_phase_oath' => 'Juramento'
     }
     translation[term]
   end

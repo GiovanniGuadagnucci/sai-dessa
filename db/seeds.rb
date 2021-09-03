@@ -1,5 +1,5 @@
 SD.each do |phase, _value|
-  SD[phase]["categories"][0...-1].each do |category|
+  SD[phase]["categories"][0...-2].each do |category|
     5.times do
       Question.create(content: Faker::TvShows::HowIMetYourMother.quote, category: category, right_answer: 5)
     end
