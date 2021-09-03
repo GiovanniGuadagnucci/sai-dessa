@@ -5,7 +5,7 @@
   <div class="video-wrapper">
     <% @educations.each do |education| %>
       <p>Esse vídeo é sobre <%= translate(education.category) %></p><br>
-      <%= cl_video_tag("Placeholder_Video_wtwfy7", loop: false, controls: true,
+      <%= cl_video_tag("Placeholder_Video_iipc1v", loop: false, controls: true,
       transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
     <% end %>
     <br>
