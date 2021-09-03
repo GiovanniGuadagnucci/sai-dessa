@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>Conteúdos auxiliares</h1>
-  <p>Você está na <%= current_user.current_phase %></p>
+  <h1>Video Introdutorio da <%= translate(current_user.current_phase)%></h1>
+  <p>Aqui voce vai entender mais a sua proxima fase</p>
 
   <div class="video-wrapper">
     <% @educations.each do |education| %>
-      <p>Esse vídeo é sobre <%= education.category %></p><br>
+      <p>Esse vídeo é sobre <%= translate(education.category) %></p><br>
       <%= cl_video_tag("Placeholder_Video_wtwfy7", loop: false, controls: true,
       transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
     <% end %>
