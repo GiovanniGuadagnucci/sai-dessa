@@ -1,3 +1,4 @@
+// grid.layoutit.com?id=pzMJ8ya grid
 .container-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -5,17 +6,27 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "navbar navbar navbar"
+    //"navbar navbar navbar"
+
     "banner banner banner"
     "value-proposition value-proposition value-proposition"
     "social-prove social-prove social-prove"
     "benefits benefits benefits"
     "jorney jorney jorney";
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  max-height: 100vh;
+  color: white;
+  text-align: center;
 }
-
 .navbar {
   grid-area: navbar;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .banner {
@@ -29,7 +40,9 @@
     ". banner-content ."
     ". . .";
   grid-area: banner;
-  background-color: lightcyan;
+  background-image: url("https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045__480.png");
+  background-position: center;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -37,6 +50,15 @@
   justify-self: center;
   align-self: center;
   grid-area: banner-content;
+  text-align: center;
+  h1 {
+    font-weight: bold;
+    font-size: 6rem;
+  }
+  p {
+    font-weight: light;
+    font-size: 3rem;
+  }
 }
 
 .value-proposition {
@@ -51,12 +73,15 @@
     ". . . .";
   grid-area: value-proposition;
   background-color: white;
+  height: 100vh;
+  color: $main-blue;
 }
 
 .value-proposition-content {
   justify-self: center;
   align-self: center;
   grid-area: value-proposition-content;
+  text-align: left;
 }
 
 .value-proposition-image {
@@ -77,7 +102,8 @@
     ". social-prove-cards social-prove-cards ."
     ". . . .";
   grid-area: social-prove;
-  background-color: lightcyan;
+  background-color: $main-blue;
+  height: 100vh;
 }
 
 .social-prove-content {
@@ -90,6 +116,7 @@
   justify-self: center;
   align-self: center;
   grid-area: social-prove-cards;
+  display: flex;
 }
 
 .benefits {
@@ -104,6 +131,8 @@
     ". . . .";
   grid-area: benefits;
   background-color: white;
+  color: $main-blue;
+  height: 100vh;
 }
 
 .benefits-content {
@@ -132,13 +161,15 @@
     ". jorney-fourth-image jorney-fourth-content ."
     ". . . .";
   grid-area: jorney;
-  background-color: lightcyan;
+  background-color: $main-blue;
+  max-height: 400vh;
 }
 
 .jorney-first-content {
   justify-self: center;
   align-self: center;
   grid-area: jorney-first-content;
+  text-align: left;
 }
 
 .jorney-first-image {
@@ -157,12 +188,14 @@
   justify-self: center;
   align-self: center;
   grid-area: jorney-second-content;
+  text-align: right;
 }
 
 .jorney-third-content {
   justify-self: center;
   align-self: center;
   grid-area: jorney-third-content;
+  text-align: left;
 }
 
 .jorney-third-image {
@@ -181,4 +214,5 @@
   justify-self: center;
   align-self: center;
   grid-area: jorney-fourth-content;
+  text-align: right;
 }
