@@ -9,7 +9,7 @@ module TraducaoHelper
       'score' => 'Pontuação',
       'second_phase' => 'Segunda fase',
       'hard_skills' => 'Habilidades técnicas',
-      'soft_skills' => 'Habilidade interpessoais',
+      'soft_skills' => 'Habilidades interpessoais',
       'strong_points' => 'Pontos fortes',
       'week_points' => 'Pontos fracos',
       'second_phase_oath' => 'Juramento',
@@ -23,7 +23,11 @@ module TraducaoHelper
       'references' => 'Referências',
       'new_hard_skills' => 'Novas habilidades técnicas',
       'new_soft_skills' => 'Novas habilidades interpessoais',
-      'fourth_phase_oath' => 'Juramento'
+      'fourth_phase_oath' => 'Juramento',
+      'first_phase_intro' => 'Introdução para Primeira Fase',
+      'second_phase_intro' => 'Introdução para Segunda Fase',
+      'third_phase_intro' => 'Introdução para Terceira Fase',
+      'fourth_phase_intro' => 'Introdução para Quarta Fase'
     }
     translation[term]
   end
