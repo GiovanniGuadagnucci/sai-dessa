@@ -26,10 +26,11 @@
                   label: 'Senha atual',
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
+      <%= f.input :photo, as: :file %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Atualizar", class:'btn btn-primary' %>
+      <%= f.button :submit, "Atualizar dados", class:'btn btn-primary' %>
     </div>
   <% end %>
 
