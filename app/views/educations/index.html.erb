@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Video Introdutorio da <%= translate(current_user.current_phase)%></h1>
-  <p>Aqui voce vai entender mais a sua proxima fase</p>
+  <p>Aqui voce vai entender mais sobre a sua proxima fase</p>
 
   <div class="video-wrapper">
     <% @educations.each do |education| %>
@@ -10,6 +10,8 @@
     <% end %>
     <br>
     <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
+    <% if !params[:fase].present? %>
+      <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn btn-danger"  %>
+    <% end %>
   </div>
-
 </div>

@@ -12,4 +12,9 @@ class PagesController < ApplicationController
   def meio
     @motivos = current_user.undone_categories
   end
+
+  def fim
+    exclude = ["controller", "action"]
+    @render = params.reject { |key, _value| exclude.include? key }
+  end
 end
