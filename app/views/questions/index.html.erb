@@ -1,5 +1,5 @@
-<div class="container">
-  <h1>Questions#Index</h1>
+<div class="container col-lg-6 col-md-9 col-sm-12 mt-5">
+  <h1><%= current_user.name %>, você está na <%= current_user.current_phase %>!</h1>
 
   <% @questions.each do |question| %>
     <%= render 'question', question: question, answer: question.find_user_answer(current_user) %>
