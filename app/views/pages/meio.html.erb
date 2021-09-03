@@ -1,0 +1,7 @@
+<h1>Caminho daqui pra frente</h1>
+<p><%= current_user.name %> Parabens! daqui pra frente voce precisa endenter:</p>
+<% @motivos.each do |motivo| %>
+  <p><%= motivo %></p>
+<% end %>
+
+<%= link_to "Entao bora lá", educacao_path, class: "btn btn-primary" %>
