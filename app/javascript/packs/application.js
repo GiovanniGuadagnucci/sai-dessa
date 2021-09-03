@@ -22,9 +22,9 @@ ActiveStorage.start()
 import "bootstrap";
 
 // Internal imports, e.g:
-// import { initOathFlow } from '../components/init_oath_flow';
+import { initChooseAnswer } from '../components/init_choose_answer';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initOathFlow();
+  initChooseAnswer();
 });
