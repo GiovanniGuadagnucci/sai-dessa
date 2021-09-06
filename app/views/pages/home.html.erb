@@ -1,93 +1,71 @@
-<div class="container-grid">
-  <%# <div class="navbar"><p>navbar-teste</p></div> %>
-  <div class="banner">
+<div class="wrapper">
+  <div class="banner-section">
     <div class="banner-content">
+      <h1>
+        <span style="font-weight: 700">Para quem busca ser feliz de segunda a segunda.</span><br>
+        <span style="color:#785df5; font-weight: bold">Sai dessa</span> de passar a vida esperando os finais de semana, seu trabalho pode ser algo que você ame fazer
+      </h1>
+      <h3>
+        Através de um jogo do autoconhecimento que te ajudará a identificar tudo o que você precisa saber para seu bem estar profisisonal
+      </h3>
+      <h1>
+        Você já tinha pensado nisso?
+      </h1>
+      <%= link_to "Quero comerçar a jogar", fase_path, class: "button" %>
+    </div>
+    <div class="banner-image">
+      <%= image_tag "banner-image" %>
+    </div>
+  </div>
+  <div class="section-a">
+    <div class="division">
+      <%= image_tag "divisao", class:"division-image" %>
+      <h1 class="col-6">Como funciona o jogo sai dessa</h1>
+      <h3 class="col-9 ">Você acumula pontos enquanto traça um futuro profissional feliz</h2>
+    </div>
+    <div class="section-a-content">
+      <%= image_tag "background-jorney"%>
+    </div>
+    <%= link_to "Quero comerçar a jogar", fase_path, class: "button" %>
+  </div>
+  <div class="section-b">
+    <div class="division">
+      <%= image_tag "divisao", class:"division-image"%>
+      <h1 class="col-6">Porque criamos o Sai Dessa?</h1>
+      <h3 class="col-9">O Brasileiro está infeliz e não podiamos ficar só olhando</h2>
+    </div>
+    <div class="cards-container">
+      <div class="cards-wrapper">
+        <div class="card-why">
+          <h1><span style="font-size:4rem; font-weight:bold">90%<br></span> dos brasileiros estão infelizes no trabalho¹</h1>
+          <p>Pesquisas comprovam que a esmagadora maioria dos brasileiros não gostam de sua carreira</p>
+        </div>
+        <div class="card-why">
+          <h1><span style="font-size:4rem; font-weight:bold">60%<br></span> tem medo de mudar²</h1>
+          <p>Mesmo infelizes, os brasileiros tem medo de mudar de emprego</p>
+        </div>
+        <div class="card-why">
+          <h1><span style="font-size:4rem; font-weight:bold">Depressão</span>³</h1>
+          <p>Pesquisas comprovam que a esmagadora maioria dos brasileiros não gostam de sua carreira</p>
+        </div>
+      </div>
+    </div>
+    <div class="references-and-button">
+      <div class="references">
+        <p>¹pesquisa feita por Freddy Machado consultor profissional em 21 estados</p>
+        <p>²levantamento realizado pela empresa Brands2Life, em parceria com o LinkedIn</p>
+        <p>³levantamento realizado pela empresa pelo consultor de carreiras Fredy Machado, para seu livro "é possível se reinventar e integrar a vida pessoal e profissional"</p>
+      </div>
+      <div>
+        <%= link_to "Quero comerçar a jogar", fase_path, class: "button" %>
+      </div>
+    </div>
+    <div class="footer">
       <h1>Sai Dessa</h1>
-      <p>Eu nunca tinha pensado nisso!</p>
-      <%= link_to "Bora pros testes!", fase_path, class: "button next"%>
-    </div>
-  </div>
-  <div class="value-proposition">
-    <div class="value-proposition-content">
-      <h2>Para quem busca ser feliz de segunda a segunda</h2>
-      <h2>Chega de passar a vida esperando os finais de semana, seu trabalho pode ser algo que você ame fazer</h2>
-    </div>
-    <div class="value-proposition-image"><img src="https://picsum.photos/600/600?1"></div>
-  </div>
-  <div class="social-prove">
-    <div class="social-prove-content">
-      <h2>90% dos CLTs brasileiros estão insatisfeitos com seus trabalhos</h2>
-      <h2>60% tem medo de mudar de emprego ou não sabem o que os faria feliz</h2>
-    </div>
-    <div class="social-prove-cards">
-      <div class="card-social-prove">
-        <div class="card-image"><img src="https://picsum.photos/600/600?7"></div>
-        <div class="card-content">
-          <div class="name">
-            <h2>lorem</h2>
-          </div>
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, eum!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-social-prove">
-        <div class="card-image"><img src="https://picsum.photos/600/600?8"></div>
-        <div class="card-content">
-          <div class="name">
-            <h2>lorem</h2>
-          </div>
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, iure!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-social-prove">
-        <div class="card-image"><img src="https://picsum.photos/600/600?9"></div>
-        <div class="card-content">
-          <div class="name">
-            <h2>lorem</h2>
-          </div>
-          <div class="text">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Officiis, error.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="benefits">
-    <div class="benefits-content">
-      <h2>Super divertido</h2>
-      <h2>Simplificado</h2>
-      <h2>Transparente</h2>
-      <h2>Focado em você</h2>
-    </div>
-    <div class="benefits-image"><img src="https://picsum.photos/600/600?2"></div>
-  </div>
-  <div class="jorney">
-    <div class="jorney-first-content">
-      <h2>Auto Conhecimento</h2>
-      <h2>Objetivo de vida</h2>
-      <h2>Valores pessoais</h2>
-    </div>
-    <div class="jorney-first-image"><img src="https://picsum.photos/600/600?3"></div>
-    <div class="jorney-second-image"><img src="https://picsum.photos/600/600?4"></div>
-    <div class="jorney-second-content">
-      <h2>Hard e soft Skills</h2>
-      <h2>Pontos fortes e pontos fracos</h2>
-    </div>
-    <div class="jorney-third-content">
-      <h2>Empresas que combinam com você</h2>
-      <h2>No que focar</h2>
-    </div>
-    <div class="jorney-third-image"><img src="https://picsum.photos/600/600?5"></div>
-    <div class="jorney-fourth-image"><img src="https://picsum.photos/600/600?6"></div>
-    <div class="jorney-fourth-content">
-      <h2>Como se preparar para entrevista</h2>
-      <h2>Seu sim esta cada dia mais próximo</h2>
+      <ul>
+        <li><i class="fab fa-linkedin"></i></li>
+        <li><i class="fab fa-instagram-square"></i></li>
+      </ul>
     </div>
   </div>
 </div>
