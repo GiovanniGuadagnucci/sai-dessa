@@ -16,7 +16,9 @@ class QuestionsController < ApplicationController
   end
 
   def nextstep
-    if current_user.undone_categories.empty?
+    if current_user.user_score >= SD["fourth_phase"]["score"]
+      redirect_to jornada_final_path
+    elsif current_user.undone_categories.empty?
       redirect_to fase_path
     elsif current_user.user_oath_count.zero?
       redirect_to educacao_path
@@ -27,4 +29,15 @@ class QuestionsController < ApplicationController
       redirect_to fim_path
     end
   end
+
+
+
+
+
+
+
+
+
+
+
 end

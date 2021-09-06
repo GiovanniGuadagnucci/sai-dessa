@@ -17,4 +17,7 @@ class PagesController < ApplicationController
     exclude = ["controller", "action"]
     @render = params.reject { |key, _value| exclude.include? key }
   end
+
+  def jornada_final
+  end
 end

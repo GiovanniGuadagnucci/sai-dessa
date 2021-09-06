@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/educacao', to: 'educations#index'
   get '/questoes', to: 'questions#index'
   get '/nextstep', to: 'questions#nextstep'
+  get '/jornada_final', to: 'pages#jornada_final'
 end
