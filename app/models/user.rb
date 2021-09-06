@@ -61,6 +61,14 @@ class User < ApplicationRecord
     update(score: temp)
   end
 
+  def user_score
+    total_score = 0
+    score.each do |_phase, categories|
+      total_score += categories.reject { |category| category == "oath" }.count { |category| category[1] >= 80 }
+    end
+    total_score
+  end
+
   private
 
   def categ_scores(answers)
@@ -73,11 +81,11 @@ class User < ApplicationRecord
     end
   end
 
-  def user_score
-    total_score = 0
-    score.each do |_phase, categories|
-      total_score += categories.reject { |category| category == "oath" }.count { |category| category[1] >= 80 }
-    end
-    total_score
-  end
+
+
+
+
+
+
+
 end
