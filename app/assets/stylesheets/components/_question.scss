@@ -36,20 +36,35 @@
   background-color: lightgray;
   &:first-child {
     width: 7.5%;
-    // background: linear-gradient(90deg,
-    //                           rgb(150, 0, 0) 0%,
-    //                           rgb(100, 20, 20) 100%)
+    background: linear-gradient(90deg,
+                              rgb(150, 0, 0) 0%,
+                              rgb(200, 60, 60) 100%)
   }
-  // &:nth-child(2) {
-  //   background: linear-gradient(90deg,
-  //                             rgb(100, 20, 20) 0%,
-  //                             rgb(75, 50, 50) 100%)
-  // }
+  &:nth-child(3) {
+    background: linear-gradient(90deg,
+                              rgb(200, 90, 90) 0%,
+                              rgb(220, 150, 150) 100%)
+  }
+  &:nth-child(5) {
+    background: linear-gradient(90deg,
+                              rgb(220, 180, 180) 0%,
+                              rgb(200, 200, 200) 100%)
+  }
+  &:nth-child(7) {
+    background: linear-gradient(90deg,
+                              rgb(200, 200, 200) 0%,
+                              rgb(180, 220, 180) 100%)
+  }
+  &:nth-child(9) {
+    background: linear-gradient(90deg,
+                              rgb(150, 220, 150) 0%,
+                              rgb(90, 200, 90) 100%)
+  }
   &:last-child {
     width: 7.5%;
-    // background: linear-gradient(90deg,
-    //                           rgb(20, 100, 20) 0%,
-    //                           rgb(0, 150, 0) 100%)
+    background: linear-gradient(90deg,
+                              rgb(60, 200, 60) 0%,
+                              rgb(0, 150, 0) 100%)
   }
 }
 

@@ -16,8 +16,8 @@ class User < ApplicationRecord
     end
   end
 
-  def phase_started?
-    score[current_phase].any?
+  def phase_not_started?
+    score[current_phase].empty? || score[current_phase].reject { |cat| cat.include?('oath') }.values.all?(0)
   end
 
   def start_phase

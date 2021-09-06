@@ -10,7 +10,7 @@
     <% end %>
     <br>
     <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
-    <% if !params[:fase].present? %>
+    <% unless current_user.phase_not_started? %>
       <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn btn-danger"  %>
     <% end %>
   </div>

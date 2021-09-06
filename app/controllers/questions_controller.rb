@@ -1,14 +1,17 @@
 class QuestionsController < ApplicationController
   def index
-    current_user.start_phase unless current_user.phase_started?
+    current_user.start_phase if current_user.phase_not_started?
 
     if params[:oath]
       @questions = Question.where(category: "#{current_user.current_phase}_oath")
       @next_path = { text: "Eu juro! Bora pro teste!", path: nextstep_path }
-    else
+    elsif current_user.user_oath_count < 2
       @questions = Question.where(category: current_user.undone_categories)
       @next_path = { text: "Essas são minhas repostas", path: nextstep_path }
+    else
+      nextstep
     end
+
   end
 
   def show
@@ -23,12 +26,10 @@ class QuestionsController < ApplicationController
     elsif current_user.oath_score >= 80 && current_user.user_oath_count == 1
       current_user.last_chance
       redirect_to questoes_path
+    elsif current_user.user_oath_count == 2
+      redirect_to fim_path
     else
-      if current_user.user_oath_count == 2
-        redirect_to fim_path
-      else
-        redirect_to fim_path({oath: ""})
-      end
+      redirect_to fim_path({oath: ""})
     end
   end
 end

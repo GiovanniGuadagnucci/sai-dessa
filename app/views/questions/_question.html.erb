@@ -12,23 +12,23 @@
     <div class="options" tabindex='<%= question.id %>' >
       <div class='option-sep' style='background: linear-gradient(90deg, rgb(150, 0, 0) 0%, rgb(200, 60, 60) 100%)'></div>
       <%= link_to answer_path(answer, answer: { user_answer: 1 }), method: :patch do %>
-        <i class="far fa-dot-circle"></i>
+        <i class="option fas fa-angle-double-left"></i>
       <% end %>
       <div class='option-sep' style='background: linear-gradient(90deg, rgb(200, 90, 90) 0%, rgb(220, 150, 150) 100%)'></div>
       <%= link_to answer_path(answer, answer: { user_answer: 2 }), method: :patch do %>
-        <i class="far fa-dot-circle"></i>
+        <i class="option fas fa-angle-left"></i>
       <% end %>
       <div class='option-sep' style='background: linear-gradient(90deg, rgb(220, 180, 180) 0%, rgb(200, 200, 200) 100%)'></div>
       <%= link_to answer_path(answer, answer: { user_answer: 3 }), method: :patch do %>
-        <i class="far fa-dot-circle"></i>
+        <i class="option far fa-dot-circle"></i>
       <% end %>
       <div class='option-sep' style='background: linear-gradient(90deg, rgb(200, 200, 200) 0%, rgb(180, 220, 180) 100%)'></div>
       <%= link_to answer_path(answer, answer: { user_answer: 4 }), method: :patch do %>
-        <i class="far fa-dot-circle"></i>
+        <i class="option fas fa-angle-right"></i>
       <% end %>
       <div class='option-sep' style='background: linear-gradient(90deg, rgb(150, 220, 150) 0%, rgb(90, 200, 90) 100%)'></div>
       <%= link_to answer_path(answer, answer: { user_answer: 5 }), method: :patch do %>
-        <i class="far fa-dot-circle"></i>
+        <i class="option fas fa-angle-double-right"></i>
       <% end %>
       <div class='option-sep' style='background: linear-gradient(90deg, rgb(60, 200, 60) 0%, rgb(0, 150, 0) 100%)'></div>
     </div>
