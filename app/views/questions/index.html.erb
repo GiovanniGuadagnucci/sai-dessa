@@ -1,5 +1,5 @@
 <div class="container col-lg-6 col-md-9 col-sm-12 mt-5">
-  <h1><%= current_user.name %>, você está na <%= translate(current_user.current_phase) %>!</h1>
+  <h1><%= current_user.name %>, você está na <%= translate(current_user.current_phase).downcase %>!</h1>
 
   <% @questions.each do |question| %>
     <%= render 'question', question: question, answer: question.find_user_answer(current_user) %>

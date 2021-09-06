@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def fase
-    @current_phase = user_signed_in? ? current_user.current_phase : 'first_phase'
+    @current_phase = current_user.current_phase
     @educational = Education.find_by(category: "#{@current_phase}_start")
   end
 

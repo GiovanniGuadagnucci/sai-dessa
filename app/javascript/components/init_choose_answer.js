@@ -2,7 +2,7 @@ const initChooseAnswer = () => {
   const questions = document.querySelectorAll(".options");
   if (questions) {
     questions.forEach(options => {
-      const answers = options.querySelectorAll('.fa-dot-circle');
+      const answers = options.querySelectorAll('.option');
       answers.forEach(answer => {
         answer.addEventListener("click", () => {
           const choosen = options.querySelector('.choosen-option');
