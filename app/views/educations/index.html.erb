@@ -9,7 +9,11 @@
       transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
     <% end %>
     <br>
-    <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
+    <% if current_user.user_oath_count == 2 %>
+        <%= link_to "Deixa eu tentar outra vez", questoes_path, class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
+    <% end %>
     <% unless current_user.phase_not_started? %>
       <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn btn-danger"  %>
     <% end %>
