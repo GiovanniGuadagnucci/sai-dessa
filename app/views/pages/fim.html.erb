@@ -1,14 +1,13 @@
 <div class="container">
   <h1>Fim da linha, <%= current_user.name %>!</h1>
-  <% if params[:oath] %>
-    <p>Eu juro sim!</p>
-    <% current_user.last_chance %>
-    <%= link_to 'Voltar para questoes', questoes_path, class: 'btn btn-primary' %>
-  <% elsif params[:watch] %>
+  <% if params[:watch] %>
     <p>Vou assitir mais tarde!</p>
     <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn btn-primary' %>
   <% end %>
   <br>
   <p>Caso não era o que voce esperava da sua jornada clique aqui e nós entraremos em contato </p>
   <%= link_to "Entraremos em contato!", root_path, class: "btn btn-danger"  %>
+
+  <p>Se quiser continuar tentando assita os edutativos outra vez</p>
+  <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn btn-primary' %>
 </div>
