@@ -1,218 +1,151 @@
-// grid.layoutit.com?id=pzMJ8ya grid
-.container-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 5fr 5fr 5fr 5fr 5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    //"navbar navbar navbar"
-
-    "banner banner banner"
-    "value-proposition value-proposition value-proposition"
-    "social-prove social-prove social-prove"
-    "benefits benefits benefits"
-    "jorney jorney jorney";
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  max-height: 100vh;
-  color: white;
-  text-align: center;
-}
-.navbar {
-  grid-area: navbar;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.banner {
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". banner-content ."
-    ". . .";
-  grid-area: banner;
-  background-image: url("https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045__480.png");
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-}
-
-.banner-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: banner-content;
-  text-align: center;
-  h1 {
-    font-weight: bold;
-    font-size: 6rem;
-  }
-  p {
-    font-weight: light;
-    font-size: 3rem;
-  }
-}
-
-.value-proposition {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . ."
-    ". value-proposition-content value-proposition-image ."
-    ". . . .";
-  grid-area: value-proposition;
-  background-color: white;
-  height: 100vh;
-  color: $main-blue;
-}
-
-.value-proposition-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: value-proposition-content;
-  text-align: left;
-}
-
-.value-proposition-image {
-  justify-self: center;
-  align-self: center;
-  grid-area: value-proposition-image;
-}
-
-.social-prove {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 2fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . ."
-    ". social-prove-content social-prove-content ."
-    ". social-prove-cards social-prove-cards ."
-    ". . . .";
-  grid-area: social-prove;
-  background-color: $main-blue;
-  height: 100vh;
-}
-
-.social-prove-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: social-prove-content;
-}
-
-.social-prove-cards {
-  justify-self: center;
-  align-self: center;
-  grid-area: social-prove-cards;
+.wrapper {
   display: flex;
+  flex-direction: column;
+}
+.banner-section {
+  padding: 0px 100px;
+  display: flex;
+  .banner-image {
+    display: flex;
+    align-items: center;
+  }
+  .banner-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 970px;
+    min-height: calc(100vh - 132px);
+  }
+  .banner-content > * {
+    margin: 0 !important;
+  }
+  .banner-content > h1:nth-of-type(2) {
+    margin: 3rem 0 1.38rem !important;
+  }
+  img {
+    width: 450px;
+    height: 450px;
+  }
+  .background-image {
+    position: absolute;
+    width: 900px;
+    height: 800px;
+    right: -50px;
+    top: 200px;
+    transform: rotate(-30deg);
+    z-index: -1;
+  }
+}
+.section-a {
+  height: 200vh;
+  display: inline-table;
+  .section-a-content {
+    display: flex;
+    padding: 0px 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .button {
+    position: relative;
+    bottom: 400px;
+    right: -1200px;
+  }
 }
 
-.benefits {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . ."
-    ". benefits-content benefits-image ."
-    ". . . .";
-  grid-area: benefits;
-  background-color: white;
-  color: $main-blue;
+.section-b {
+  display: flex;
   height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  .cards-container {
+    padding: 0px 100px;
+    .cards-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 16px;
+    }
+    .card-why {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      h1 {
+        text-align: center;
+        margin: 50px;
+        border-bottom: 1px solid #795df538;
+      }
+      p {
+        margin: 50px;
+        margin-top: 0;
+      }
+    }
+  }
+  .references-and-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    p {
+      font-size: small;
+      margin: 0;
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 132px;
+    background-color: $main;
+    color: white;
+    h1 {
+      font-size: 62px;
+      line-height: 79px;
+      font-family: "Amatic SC", cursive;
+      margin: 0;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0 20px;
+        i {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
 }
 
-.benefits-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: benefits-content;
-}
-
-.benefits-image {
-  justify-self: center;
-  align-self: center;
-  grid-area: benefits-image;
-}
-
-.jorney {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . ."
-    ". jorney-first-content jorney-first-image ."
-    ". jorney-second-image jorney-second-content ."
-    ". jorney-third-content jorney-third-image ."
-    ". jorney-fourth-image jorney-fourth-content ."
-    ". . . .";
-  grid-area: jorney;
-  background-color: $main-blue;
-  max-height: 400vh;
-}
-
-.jorney-first-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-first-content;
-  text-align: left;
-}
-
-.jorney-first-image {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-first-image;
-}
-
-.jorney-second-image {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-second-image;
-}
-
-.jorney-second-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-second-content;
-  text-align: right;
-}
-
-.jorney-third-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-third-content;
-  text-align: left;
-}
-
-.jorney-third-image {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-third-image;
-}
-
-.jorney-fourth-image {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-fourth-image;
-}
-
-.jorney-fourth-content {
-  justify-self: center;
-  align-self: center;
-  grid-area: jorney-fourth-content;
-  text-align: right;
+.division {
+  display: flex;
+  flex-direction: column;
+  height: 132px;
+  position: relative;
+  .division-image {
+    width: -webkit-fill-available;
+    height: 164px;
+  }
+  h1 {
+    padding: 0px 100px;
+    color: white;
+    font-weight: bold;
+    margin: 0 !important;
+    top: -130px;
+  }
+  h3 {
+    padding: 0px 100px;
+    color: white;
+    margin: 0 !important;
+    left: 400px;
+    top: -130px;
+  }
 }

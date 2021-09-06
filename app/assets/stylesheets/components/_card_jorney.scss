@@ -1,0 +1,31 @@
+.card-jorney {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 640px;
+  height: 132px;
+
+  & > h3:first-child {
+    transform: rotate(-90deg);
+  }
+  .bubble-points {
+    height: 100px;
+    width: 100px;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    p {
+      position: relative;
+      top: -73px;
+      left: 1px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .card-content {
+    h3 {
+      margin: 0;
+    }
+  }
+}
