@@ -37,6 +37,9 @@
     transform: rotate(-30deg);
     z-index: -1;
   }
+  h1 {
+    color: black !important;
+  }
 }
 .section-a {
   height: 200vh;
@@ -57,7 +60,6 @@
     right: -1200px;
   }
 }
-
 
 .section-b {
   display: flex;
@@ -81,6 +83,7 @@
         text-align: center;
         margin: 50px;
         border-bottom: 1px solid #795df538;
+        color: black !important;
       }
       p {
         margin: 50px;

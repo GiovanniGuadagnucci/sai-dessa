@@ -1,13 +1,19 @@
-<div class="container">
-  <h1>Fim da linha, <%= current_user.name %>!</h1>
-  <% if params[:watch] %>
-    <p>Vou assitir mais tarde!</p>
-    <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn btn-primary' %>
-  <% end %>
-  <br>
-  <p>Caso não era o que voce esperava da sua jornada clique aqui e nós entraremos em contato </p>
-  <%= link_to "Entraremos em contato!", root_path, class: "btn btn-danger"  %>
-
-  <p>Se quiser continuar tentando assita os edutativos outra vez</p>
-  <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn btn-primary' %>
+<div class="pages-banner"></div>
+<div class="container-app">
+  <div class="title-wrapper">
+    <h1>Fim da linha, <%= current_user.name.capitalize() %>!</h1>
+    <div class="content-wrapper">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis
+        viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+        vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+        imperdiet. Nunc ut sem vitae risus tristique posuere.
+      </p>
+    </div>
+    <div class="buttons-wrapper">
+      <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn-app next-step' %>
+      <%= link_to "Entraremos em contato!", root_path, class: "btn-app feedback"  %>
+    </div>
+  </div>
 </div>
