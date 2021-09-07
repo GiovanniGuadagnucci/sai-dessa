@@ -16,8 +16,6 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
 
-  private
-
   def nextstep
     if current_user.user_score >= SD["fourth_phase"]["score"]
       redirect_to jornada_final_path
