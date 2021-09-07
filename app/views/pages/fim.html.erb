@@ -2,12 +2,12 @@
   <h1>Fim da linha, <%= current_user.name %>!</h1>
   <% if params[:watch] %>
     <p>Vou assitir mais tarde!</p>
-    <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn btn-primary' %>
+    <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn-app next-step' %>
   <% end %>
   <br>
   <p>Caso não era o que voce esperava da sua jornada clique aqui e nós entraremos em contato </p>
-  <%= link_to "Entraremos em contato!", root_path, class: "btn btn-danger"  %>
+  <%= link_to "Entraremos em contato!", root_path, class: "btn-app feedback"  %>
 
   <p>Se quiser continuar tentando assita os edutativos outra vez</p>
-  <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn btn-primary' %>
+  <%= link_to 'Voltar pro educativo', educacao_path, class: 'btn-app next-step' %>
 </div>
