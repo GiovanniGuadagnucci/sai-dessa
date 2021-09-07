@@ -1,11 +1,37 @@
-.button {
-  padding: 13px 30px;
-  background: #4d29f2;
-  border-radius: 4px;
+.btn-app {
+  display: flex;
+  min-height: 50px;
+  min-width: 200px;
+  padding: 0px 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 45px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
   color: white;
-  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.next-step {
+  background-color: rgba($color: $main, $alpha: 0.9);
   &:hover {
-    color: #ece8ff;
+    background-color: $main;
+    color: #fff;
+    transition: 0.2x;
+  }
+}
+.feedback {
+  background-color: rgba($color: $main-brown, $alpha: 0.9);
+  &:hover {
+    background-color: $main-brown;
+    color: #fff;
+    transition: 0.2x;
+  }
+}
+
+.education {
+  background-color: rgba($color: $main-green, $alpha: 0.9);
+  &:hover {
+    background-color: $main-green;
+    color: #fff;
     transition: 0.2x;
   }
 }
