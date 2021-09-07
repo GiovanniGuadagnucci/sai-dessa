@@ -75,31 +75,51 @@
   min-height: 40px;
   min-width: 0px;
   padding: 30px;
-  background-color: #56ac8a00;
-  border: 1px solid #56ac8a;
+  background-color: rgba($color: $main-green, $alpha: 0);
+  border: 1px solid $main-green;
+  transition: .1s;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 4px $main-green;
+  }
 }
 
 .button.medium {
   margin: 20px;
   padding: 20px;
-  background-color: #56ac8a00;
-  border: 1px solid #56ac8a;
+  background-color: rgba($color: $main-green, $alpha: 0);
+  border: 1px solid $main-green;
+  transition: .1s;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 4px $main-green;
+  }
 }
 
 .button.small {
   padding: 10px;
-  background-color: #9b9faa00;
-  border: 1px solid #9b9faa;
+  background-color: rgba($color: $main-gray, $alpha: 0);
+  border: 1px solid $main-gray;
+  transition: .1s;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 4px $main-gray;
+  }
 }
 
 .button.medium.desagree {
-  background-color: #5f394d00;
-  border: 1px solid #5f394d;
+  background-color: rgba($color: $main-brown, $alpha: 0);
+  border: 1px solid $main-brown;
+  transition: .1s;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 4px $main-brown;
+  }
 }
 
 .button.big.desagree {
-  background-color: #5f394d00;
-  border: 1px solid #5f394d;
+  background-color: rgba($color: $main-brown, $alpha: 0);
+  border: 1px solid $main-brown;
+  transition: .1s;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 4px $main-brown;
+  }
 }
 
 .background-brown {
