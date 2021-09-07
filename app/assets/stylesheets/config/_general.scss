@@ -4,3 +4,16 @@ a {
 body {
   background-color: white !important;
 }
+
+.container-app {
+  display: block;
+  overflow: hidden;
+  min-height: 1000px;
+  padding: 5vh 100px 0vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-bottom: 1px none #000;
+  text-align: left;
+}

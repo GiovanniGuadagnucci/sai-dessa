@@ -12,7 +12,7 @@
    <% end %>
   </div>
 </div>
-<div class="conteiner-app">
+<div class="container-app">
   <% @questions.each do |question| %>
     <%= render 'question', question: question, answer: question.find_user_answer(current_user) %>
   <% end %>

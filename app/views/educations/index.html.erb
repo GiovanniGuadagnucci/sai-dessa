@@ -1,21 +1,27 @@
-<div class="container">
-  <h1>Video Introdutorio da <%= translate(current_user.current_phase)%></h1>
-  <p>Aqui voce vai entender mais sobre a sua proxima fase</p>
-
-  <div class="video-wrapper">
+<div class="videos-banner">
+  <div class="title-wrapper">
+    <h1>Videos Educativos</h1>
+  </div>
+</div>
+<div class="container-app">
+  <div class="videos-wrapper">
     <% @educations.each do |education| %>
-      <p>Esse vídeo é sobre <%= translate(education.category) %></p><br>
+      <div class="title-wrapper">
+        <h2>Esse vídeo é sobre <%= translate(education.category) %></h2>
+      </div>
       <%= cl_video_tag("Placeholder_Video_iipc1v", loop: false, controls: true,
-      transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
-    <% end %>
-    <br>
-    <% if current_user.user_oath_count == 2 %>
-        <%= link_to "Deixa eu tentar outra vez", questoes_path, class: "btn btn-primary" %>
-      <% else %>
-        <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
-    <% end %>
-    <% unless current_user.phase_not_started? %>
-      <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn btn-danger"  %>
-    <% end %>
+        transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
+      <% end %>
+      <div class="buttons-wrapper">
+        <% if current_user.user_oath_count == 2 %>
+          <%= link_to "Deixa eu tentar outra vez", questoes_path, class: "btn btn-primary" %>
+        <% else %>
+          <%= link_to @next_path[:text], @next_path[:path], class: "btn btn-primary" %>
+        <% end %>
+        <% unless current_user.phase_not_started? %>
+          <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn btn-danger"  %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
