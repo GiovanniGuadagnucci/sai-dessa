@@ -1,6 +1,16 @@
-<div>
-<h1 class="final-journey">
-  Você chegou na etapa final, parabéns.
-  <p>Obrigado por utilizar a nossa plataforma.</p>
-</h1>
+<div class="pages-banner"></div>
+<div class="container-app">
+  <div class="title-wrapper">
+    <h1>Parabens, <%= current_user.name.capitalize() %>!</h1>
+    <div class="content-wrapper">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis
+        viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+        vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+        imperdiet. Nunc ut sem vitae risus tristique posuere.
+      </p>
+    </div>
+    <%= link_to "De seu Feedback!", root_path, class: "btn btn-danger"  %>
+  </div>
 </div>
