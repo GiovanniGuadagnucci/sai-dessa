@@ -61,6 +61,13 @@ class User < ApplicationRecord
     user_score == SD["fourth_phase"]["score"]
   end
 
+  def ending_protected?
+    journey_ended? ||
+      undone_categories.empty? ||
+      user_oath_count <= 1 ||
+      (oath_score >= 80 && user_oath_count == 2)
+  end
+
   def user_score
     total_score = 0
     score.each do |_phase, categories|
