@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #  SD.each do |phase, _value|
 #    SD[phase]["categories"][0...-2].each do |category|
 #      5.times do
@@ -40,3 +41,18 @@ Question.create(content: "Preciso me desenvolver em todos os meus pontos fracos"
 Question.create(content: "Costumo receber elogios por essas habilidades", category: "strong_points", right_answer: 5)
 Question.create(content: "Alguns pontos fortes ainda precisam ser mais desenvolvidos para me ajudar a alcançar os meus objetivos pessoais", category: "strong_points", right_answer: 5)
 Question.create(content: "Na maioria das vezes eu não estou pensando em evoluir meus pontos fortes, foco nos pontos fracos", category: "strong_points", right_answer: 5)
+
+Question.create(content: "Na minha opinião a cultura empresarial é importante para guiar o comportamento e hábitos dos colaboradores", category: "company_culture", right_answer: 5)
+Question.create(content: "A cultura empresarial é um conjunto de normas, valores e missão da organização", category: "company_culture", right_answer: 5)
+Question.create(content: "Eu nunca parei para pensar no que é a cultura organizacional", category: "company_culture", right_answer: 5)
+Question.create(content: "A cultura organizacional deve estar alinhada com meus objetivos e valores assim minhas atitudes e posturas estarão alinhadas com as da empresa e vice e versa", category: "company_culture", right_answer: 5)
+Question.create(content: "A forma como a empresa trata o colaborador é parte da cultura organizacional", category: "company_culture", right_answer: 5)
+
+Question.create(content: "Sempre que quero conhecer uma empresa procuro pela missão, visão e valores", category: "company_values", right_answer: 5)
+Question.create(content: "Missão, visão e valores resumem o propósito de uma empresa existir, a sua função e seu lugar na sociedade.", category: "company_values", right_answer: 5)
+Question.create(content: "Missão, visão e valores demonstram onde uma empresa quer chegar e como é a sua lógica de trabalho.", category: "company_values", right_answer: 5)
+
+Question.create(content: "Setor, tamanho, localização, modelo de trabalho (remoto ou presencial) são caracteristicas de empresas.", category: "company_characteristics", right_answer: 5)
+
+Question.create(content: "Sei exatamente o cargo que eu quero ocupar nume empresa.", category: "positions", right_answer: 5)
+Question.create(content: "Já pesquisei sobre o cargo que desejo.", category: "positions", right_answer: 5)
