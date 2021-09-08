@@ -11,7 +11,13 @@
       <h1>
         Você já tinha pensado nisso?
       </h1>
-      <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+
+      <% if current_user.journey_ended? %>
+        <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
+      <% else %>
+        <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+      <% end %>
+
     </div>
     <div class="banner-image">
       <%= image_tag "banner-image.png" %>
@@ -27,7 +33,13 @@
       <%= image_tag "background-jorney.png"%>
     </div>
     <div>
-      <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+
+      <% if current_user.journey_ended? %>
+        <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
+      <% else %>
+        <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+      <% end %>
+
     </div>
   </div>
   <div class="section-b">
@@ -59,7 +71,13 @@
         <p>³levantamento realizado pela empresa pelo consultor de carreiras Fredy Machado, para seu livro "é possível se reinventar e integrar a vida pessoal e profissional"</p>
       </div>
       <div>
+
+      <% if current_user.journey_ended? %>
+        <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
+      <% else %>
         <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+      <% end %>
+
       </div>
     </div>
     <div class="footer">

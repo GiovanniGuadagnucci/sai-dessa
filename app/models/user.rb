@@ -57,10 +57,14 @@ class User < ApplicationRecord
     update(score: temp)
   end
 
+  def journey_ended?
+    user_score == SD["fourth_phase"]["score"]
+  end
+
   def user_score
     total_score = 0
     score.each do |_phase, categories|
-      total_score += categories.reject { |category| category == "oath" }.count { |category| category[1] >= 80 }
+      total_score += categories.reject { |category| category.include? "oath" }.count { |category| category[1] >= 80 }
     end
     total_score
   end
