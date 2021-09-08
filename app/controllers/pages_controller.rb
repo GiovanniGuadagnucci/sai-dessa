@@ -16,8 +16,10 @@ class PagesController < ApplicationController
   def fim
     exclude = ["controller", "action"]
     @render = params.reject { |key, _value| exclude.include? key }
+    redirect_to fase_path if current_user.ending_protected?
   end
 
   def jornada_final
+    redirect_to fase_path unless current_user.journey_ended?
   end
 end
