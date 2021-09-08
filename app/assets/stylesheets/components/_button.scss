@@ -1,8 +1,20 @@
+.button-wrapper {
+  display: flex;
+  padding-top: 0px;
+  padding-right: 0px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+  text-align: center;
+}
+
 .btn-app {
   display: flex;
   min-height: 50px;
   min-width: 200px;
   padding: 0px 20px;
+  margin: 0px 20px;
   align-items: center;
   justify-content: center;
   border-radius: 45px;

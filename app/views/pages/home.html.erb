@@ -11,13 +11,13 @@
       <h1>
         Você já tinha pensado nisso?
       </h1>
-
-      <% if user_signed_in? && current_user.journey_ended? %>
-        <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
-      <% else %>
-        <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
-      <% end %>
-
+      <div class="button-wrapper">
+        <% if user_signed_in? && current_user.journey_ended? %>
+          <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
+        <% else %>
+          <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+        <% end %>
+      </div>
     </div>
     <div class="banner-image">
       <%= image_tag "banner-image.png" %>
@@ -32,14 +32,12 @@
     <div class="section-a-content">
       <%= image_tag "background-jorney.png"%>
     </div>
-    <div>
-
+    <div class="button-wrapper">
       <% if user_signed_in? && current_user.journey_ended? %>
         <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
       <% else %>
         <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
       <% end %>
-
     </div>
   </div>
   <div class="section-b">
@@ -70,14 +68,12 @@
         <p>²levantamento realizado pela empresa Brands2Life, em parceria com o LinkedIn</p>
         <p>³levantamento realizado pela empresa pelo consultor de carreiras Fredy Machado, para seu livro "é possível se reinventar e integrar a vida pessoal e profissional"</p>
       </div>
-      <div>
-
-      <% if user_signed_in? && current_user.journey_ended? %>
-        <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
-      <% else %>
-        <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
-      <% end %>
-
+      <div class="button-wrapper">
+        <% if user_signed_in? && current_user.journey_ended? %>
+          <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
+        <% else %>
+          <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+        <% end %>
       </div>
     </div>
     <div class="footer">
