@@ -1,37 +1,11 @@
 .videos-banner {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  height: auto;
-  min-height: 20vh;
+  height: 20vh;
   padding: 50px 100px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: center;
-  -ms-flex-pack: justify;
   justify-content: center;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background-color: $main-blue;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from($main-blue),
-    to(#fff)
-  );
+  align-items: center;
   background-image: linear-gradient(180deg, $main-blue, #fff);
-  text-align: left;
 }
 
 .title-wrapper {
