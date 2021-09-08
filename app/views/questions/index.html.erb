@@ -1,15 +1,20 @@
 <div class="questions-banner wf-section">
   <h1 class="heading-8"><%= current_user.name.capitalize() %>, você está na <%= translate(current_user.current_phase).downcase %>!</h1>
   <div class="category-cards-wrapper">
-   <% @current_user.undone_categories.each do |category| %>
-    <div class="cartegory-card">
-      <h3 class="heading-3"><%= translate(category) %></h3>
-      <p class="paragraph-2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique
-      </p>
-    </div>
-   <% end %>
+    <% if current_user.user_oath_count == 1 %>
+      <div class="cartegory-card">
+        <h3 class="heading-3">Juramento!</h3>
+      </div>
+    <% else %>
+      <% @current_user.undone_categories.each do |category| %>
+        <div class="cartegory-card">
+          <h3 class="heading-3"><%= translate(category) %></h3>
+          <p class="paragraph-2">
+            <%= SD_DESCRIPTION[@current_phase]["categories"][category] %>
+          </p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 <div class="container-app">

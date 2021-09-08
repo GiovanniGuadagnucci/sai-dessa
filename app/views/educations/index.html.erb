@@ -4,21 +4,21 @@
   </div>
 </div>
 <div class="container-app">
+  <div class="title-wrapper">
+  <% @categories.each do |category| %>
+    <h2>Esse vídeo é sobre <%= translate(category) %></h2>
+  </div>
   <div class="videos-wrapper">
-      <% @educations.each do |education| %>
-    <div class="title-wrapper">
-        <h2>Esse vídeo é sobre <%= translate(education.category) %></h2>
-    </div><%= cl_video_tag("Placeholder_Video_iipc1v", loop: false, controls: true,
-                              transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
+    <% @educations.where(category: category).each do |education| %>
+        <%= cl_video_tag(education.content_url, class: "mb-4", loop: false, controls: true,
+                            transformation: [height:360, width:640, crop:"fill", duration:"10"]) %>
     <% end %>
-      <div class="button-wrapper">
-
-        <%= link_to @btn_text, questoes_path, class: "btn-app next-step" %>
-
-        <% unless current_user.phase_not_started? %>
-          <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn-app feedback"  %>
-        <% end %>
-      </div>
-    </div>
-   </div>
- </div>
+  <% end %>
+  </div>
+  <div class="buttons-wrapper">
+     <%= link_to @btn_text, questoes_path, class: "btn-app next-step" %>
+     <% unless current_user.phase_not_started? %>
+       <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn-app feedback"  %>
+     <% end %>
+  </div>
+</div>

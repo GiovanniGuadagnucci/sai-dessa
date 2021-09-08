@@ -17,7 +17,7 @@ module TraducaoHelper
       'company_culture' => 'Cultura da empresa',
       'company_values' => 'Valores da empresa',
       'company_characteristics' => 'Caracteristicas da empresa',
-      'positions' => 'Posições',
+      'positions' => 'Cargos',
       'third_phase_oath' => 'Juramento',
       'fourth_phase' => 'Quarta fase',
       'references' => 'Referências',
