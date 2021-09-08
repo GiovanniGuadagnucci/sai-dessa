@@ -17,7 +17,7 @@
         <li class="nav-item active">
           <%= link_to "Home", "/", class: "nav-link" %>
         </li>
-        <% if current_user.user_score < SD["fourth_phase"]["score"] %>
+        <% unless current_user.journey_ended? %>
           <li class="nav-item">
             <%= link_to translate(current_user.current_phase), fase_path, class: "nav-link" %>
           </li>
@@ -26,8 +26,10 @@
           <%= cl_image_tag (current_user.photo.attached? ? current_user.photo.key : 'Avatar_cwozdf.jpg'), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Editar perfil", edit_user_registration_path, class: "dropdown-item" %>
-            <%= link_to "Aprendizado", educacao_path, class: "dropdown-item" %>
-            <%= link_to "Questionário", questoes_path, class: "dropdown-item" %>
+            <% unless current_user.journey_ended? %>
+              <%= link_to "Aprendizado", educacao_path, class: "dropdown-item" %>
+              <%= link_to "Questionário", questoes_path, class: "dropdown-item" %>
+            <% end %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
