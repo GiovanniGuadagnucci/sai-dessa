@@ -40,6 +40,9 @@
   h1 {
     color: black !important;
   }
+  .btn-app {
+    margin: 0px;
+  }
 }
 .section-a {
   height: 200vh;
@@ -54,10 +57,13 @@
       max-height: 100%;
     }
   }
-  .button {
+  .button-wrapper {
+    height: 0px;
+  }
+  .btn-app {
     position: relative;
     bottom: 400px;
-    right: -1200px;
+    left: 300px;
   }
 }
 
