@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #  SD.each do |phase, _value|
 #    SD[phase]["categories"][0...-2].each do |category|
 #      5.times do
@@ -56,3 +55,24 @@ Question.create(content: "Setor, tamanho, localização, modelo de trabalho (rem
 
 Question.create(content: "Sei exatamente o cargo que eu quero ocupar nume empresa.", category: "positions", right_answer: 5)
 Question.create(content: "Já pesquisei sobre o cargo que desejo.", category: "positions", right_answer: 5)
+
+
+Education.create(content_url: "C24", category: "self_knowledge")
+Education.create(content_url: "C25", category: "self_knowledge")
+Education.create(content_url: "C26", category: "self_knowledge")
+Education.create(content_url: "C27", category: "self_knowledge")
+Education.create(content_url: "C28", category: "personal_objectives")
+Education.create(content_url: "C29", category: "personal_values")
+
+Education.create(content_url: "C85", category: "hard_skills")
+Education.create(content_url: "C86", category: "soft_skills")
+Education.create(content_url: "C87", category: "soft_skills")
+Education.create(content_url: "C88", category: "hard_skills")
+Education.create(content_url: "C89", category: "strong_points")
+Education.create(content_url: "C90", category: "week_points")
+
+Education.create(content_url: "C90", category: "company_culture")
+Education.create(content_url: "C90", category: "company_culture")
+Education.create(content_url: "placeholder", category: "company_values")
+Education.create(content_url: "placeholder", category: "company_characteristics")
+Education.create(content_url: "placeholder", category: "positions")
