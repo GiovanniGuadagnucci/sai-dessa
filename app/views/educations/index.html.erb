@@ -16,9 +16,9 @@
   <% end %>
   </div>
   <div class="buttons-wrapper">
-    <%= link_to @next_path[:text], @next_path[:path], class: "btn-app next-step" %>
-    <% unless current_user.phase_not_started? %>
-      <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn-app feedback"  %>
-    <% end %>
+     <%= link_to @btn_text, questoes_path, class: "btn-app next-step" %>
+     <% unless current_user.phase_not_started? %>
+       <%= link_to "Não assisti os conteudos", fim_path({ watch: "Voltar pro conteudo" }), class: "btn-app feedback"  %>
+     <% end %>
   </div>
 </div>
