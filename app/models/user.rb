@@ -41,17 +41,13 @@ class User < ApplicationRecord
     score[current_phase]["#{current_phase}_oath_try"]
   end
 
-  def save_avg_score(category)
+  def save_avg_score(category, phase)
     temp = score
     user_phase = SD.find { |_k, v| v['categories'].include?(category) }.first
     answers = Answer.joins(:question).where('questions.category = ? AND answers.user_id = ?', category, id)
+    temp[phase]["#{phase}_oath_try"] = 1 if temp[phase]["#{phase}_oath_try"].zero?
+    temp[phase]["#{phase}_oath_try"] = 3 if temp[phase]["#{phase}_oath_try"] == 2
     temp[user_phase][category] = categ_scores(answers).sum(&:to_i) / categ_scores(answers).size
-    update(score: temp)
-  end
-
-  def oath_try_update
-    temp = score
-    temp[current_phase]["#{current_phase}_oath_try"] = 1
     update(score: temp)
   end
 
@@ -80,12 +76,4 @@ class User < ApplicationRecord
       end
     end
   end
-
-
-
-
-
-
-
-
 end
