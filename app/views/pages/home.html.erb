@@ -12,7 +12,7 @@
         Você já tinha pensado nisso?
       </h1>
 
-      <% if current_user.journey_ended? %>
+      <% if user_signed_in? && current_user.journey_ended? %>
         <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
       <% else %>
         <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
@@ -34,7 +34,7 @@
     </div>
     <div>
 
-      <% if current_user.journey_ended? %>
+      <% if user_signed_in? && current_user.journey_ended? %>
         <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
       <% else %>
         <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
@@ -72,7 +72,7 @@
       </div>
       <div>
 
-      <% if current_user.journey_ended? %>
+      <% if user_signed_in? && current_user.journey_ended? %>
         <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
       <% else %>
         <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
