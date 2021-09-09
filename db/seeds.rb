@@ -1,21 +1,9 @@
-#  SD.each do |phase, _value|
-#    SD[phase]["categories"][0...-2].each do |category|
-#      5.times do
-#        Question.create(content: Faker::TvShows::HowIMetYourMother.quote, category: category, right_answer: 5)
-#      end
-#      Education.create(content_url: "https://www.youtube.com/watch?v=hnp1pt8biD4", category: category)
-#    end
-#    Question.create(content: Faker::TvShows::HowIMetYourMother.quote, category: "#{phase}_oath", right_answer: 5)
-#    Education.create(content_url: "https://www.youtube.com/watch?v=hnp1pt8biD4", category: "#{phase}_intro")
-#  end
-
 User.destroy_all
 Question.destroy_all
 Answer.destroy_all
 Education.destroy_all
 
 puts 'Instâncias destruídas'
-
 
 User.create(name: "a", email: "a@a", password: "123123")
 puts 'Usuário criado'
@@ -147,12 +135,12 @@ Question.create(
 
 # ---------- QUESTOES TERCEIRA FASE
 Question.create(
-  content: "Na minha opinião a cultura empresarial é importante para guiar o comportamento e hábitos dos colaboradores",
+  content: "Na minha opinião a cultura organicacional é importante para guiar o comportamento e hábitos dos colaboradores",
   category: "company_culture",
   right_answer: 5
 )
 Question.create(
-  content: "A cultura empresarial é um conjunto de normas, valores e missão da organização",
+  content: "Para conhecer uma empresa, frequentemente eu faço pesquisas sobre as normas,  os valores e a missão da organização",
   category: "company_culture",
   right_answer: 5
 )
@@ -162,7 +150,12 @@ Question.create(
   right_answer: 5
 )
 Question.create(
-  content: "A cultura organizacional deve estar alinhada com meus objetivos e valores assim minhas atitudes e posturas estarão alinhadas com as da empresa e vice e versa.",
+  content: "Tenho consiencia que a cultura organizacional deve estar alinhada com meus objetivos e valores assim minhas atitudes e postura estarão alinhadas com as da empresa e vice e versa",
+  category: "company_culture",
+  right_answer: 5
+)
+Question.create(
+  content: "Na minha opinião a cultura da empresa não influencia em nada no meu dia a dia",
   category: "company_culture",
   right_answer: 5
 )
@@ -178,18 +171,28 @@ Question.create(
   right_answer: 5
 )
 Question.create(
-  content: "Missão, visão e valores resumem o propósito de uma empresa existir, a sua função e seu lugar na sociedade",
+  content: "Reconheço a importancia de ter na ponta da lingua a missão, visão e valores já que estes resumem o propósito de uma empresa existir, a sua função e seu lugar na sociedade.",
   category: "company_values",
   right_answer: 5
 )
 Question.create(
-  content: "Missão, visão e valores demonstram onde uma empresa quer chegar e como é a sua lógica de trabalho",
+  content: "Eu não me importo em onde uma empresa quer chegar, trabalho nela mesmo que ela esteja indo para um lugar que não concordo",
+  category: "company_values",
+  right_answer: 5
+)
+Question.create(
+  content: "Missão, visão e valores demonstram como é a sua lógica de trabalho. Isso sim muito me interessa",
   category: "company_values",
   right_answer: 5
 )
 
 Question.create(
-  content: "Setor, tamanho, localização, modelo de trabalho (remoto ou presencial) são caracteristicas de empresas",
+  content: "Quando penso nas caracteristicas da empresa me vem a cabeça Setor, tamanho, localização, modelo de trabalho (remoto ou presencial)",
+  category: "company_characteristics",
+  right_answer: 5
+)
+Question.create(
+  content: "Reconheço a importancia de saber as caracteristicas já que elas impactarão meu dia a dia",
   category: "company_characteristics",
   right_answer: 5
 )
