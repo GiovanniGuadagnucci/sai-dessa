@@ -237,7 +237,7 @@ Question.create(
   right_answer: 5
 )
 Question.create(
-  content: "Sou capaz de identificar valores, cultura e caracteristicas de empresas! E sei qual delas me interessam",
+  content: "De hoje em diante não me canditarei a nenhuma vaga sem saber a Missão, Visão e Valores de uma empresa",
   category: "third_phase_oath",
   right_answer: 5
 )
