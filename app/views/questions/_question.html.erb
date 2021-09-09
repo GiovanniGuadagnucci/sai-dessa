@@ -5,12 +5,12 @@
     </h2>
   </div>
   <div class="question-choices">
-    <h4 class="heading-5">Concordo</h4>
-    <%= link_to "", answer_path(answer, answer: { user_answer: 5 }, phase: @current_phase ), method: :patch, class: "button big w-button option", :"data-color" =>"background-green" %>
-    <%= link_to "", answer_path(answer, answer: { user_answer: 4 }, phase: @current_phase ), method: :patch, class:"button medium w-button option", :"data-color" =>"background-green" %>
-    <%= link_to "", answer_path(answer, answer: { user_answer: 3 }, phase: @current_phase ), method: :patch, class:"button small w-button option", :"data-color" =>"background-gray"  %>
-    <%= link_to "", answer_path(answer, answer: { user_answer: 2 }, phase: @current_phase ), method: :patch, class: "button medium desagree w-button option", :"data-color" =>"background-brown" %>
-    <%= link_to "", answer_path(answer, answer: { user_answer: 1 }, phase: @current_phase ), method: :patch, class: "button big desagree w-button option", :"data-color" =>"background-brown" %>
     <h4 class="heading-7">Discordo</h4>
+    <%= link_to "", answer_path(answer, answer: { user_answer: 1 }, phase: @current_phase ), method: :patch, class: "button big desagree w-button option", :"data-color" =>"background-brown" %>
+    <%= link_to "", answer_path(answer, answer: { user_answer: 2 }, phase: @current_phase ), method: :patch, class: "button medium desagree w-button option", :"data-color" =>"background-brown" %>
+    <%= link_to "", answer_path(answer, answer: { user_answer: 3 }, phase: @current_phase ), method: :patch, class:"button small w-button option", :"data-color" =>"background-gray"  %>
+    <%= link_to "", answer_path(answer, answer: { user_answer: 4 }, phase: @current_phase ), method: :patch, class:"button medium w-button option", :"data-color" =>"background-green" %>
+    <%= link_to "", answer_path(answer, answer: { user_answer: 5 }, phase: @current_phase ), method: :patch, class: "button big w-button option", :"data-color" =>"background-green" %>
+    <h4 class="heading-5">Concordo</h4>
   </div>
 </div>
