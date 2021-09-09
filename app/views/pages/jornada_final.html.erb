@@ -1,4 +1,4 @@
-<div class="pages-banner"></div>
+<div class="pages-banner end-jorney"></div>
 <div class="container-app">
   <div class="title-wrapper">
     <h2> Parabens, <%= current_user.name.capitalize() %>!</h2>
@@ -10,4 +10,6 @@
     </div>
     <%= link_to "De seu Feedback!", root_path, class: "btn-app feedback"  %>
   </div>
+  <%= image_tag "bubbles-fase", class:"bubbles-fase" %>
+  <%= image_tag "happy-people", class:"person happy-people" %>
 </div>
