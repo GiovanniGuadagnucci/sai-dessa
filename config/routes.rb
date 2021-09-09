@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   resources :answers, only: [:update]
 
   get '/fase', to: 'pages#fase'
-  get '/meio', to: 'pages#meio'
+  # get '/meio', to: 'pages#meio'
   get '/fim', to: 'pages#fim'
   get '/educacao', to: 'educations#index'
   get '/questoes', to: 'questions#index'
-  get '/nextstep', to: 'questions#nextstep'
+  post '/nextstep', to: 'questions#nextstep'
   get '/jornada_final', to: 'pages#jornada_final'
 end

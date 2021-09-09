@@ -9,14 +9,14 @@ class PagesController < ApplicationController
     @educational = Education.find_by(category: "#{@current_phase}_start")
   end
 
-  def meio
-    @motivos = current_user.undone_categories
-  end
+  # def meio
+  #   @motivos = current_user.undone_categories
+  # end
 
   def fim
-    exclude = ["controller", "action"]
-    @render = params.reject { |key, _value| exclude.include? key }
-    redirect_to fase_path if current_user.ending_protected?
+    # exclude = ["controller", "action"]
+    # @render = params.reject { |key, _value| exclude.include? key }
+    # redirect_to fase_path if current_user.ending_protected?
   end
 
   def jornada_final
