@@ -1,8 +1,16 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="navbar-logo">
-    <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "bolha-frutacor.png" %>
-      <h1>Sai Dessa</h1>
+  <div class="left-side">
+    <div class="navbar-logo">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <%= image_tag "bolha-frutacor.png" %>
+        <h1>Sai Dessa</h1>
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <div class="progress">
+        <%= image_tag 'path.svg' %>
+        <div class="progress-bg <%= current_user.journey_ended? ? 'completed' : current_user.current_phase %>"></div>
+      </div>
     <% end %>
   </div>
 
