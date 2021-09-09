@@ -1,16 +1,16 @@
 <div class="wrapper">
   <div class="banner-section">
     <div class="banner-content">
-      <h1>
+      <h2>
         <span style="font-weight: 700">Para quem busca ser feliz de segunda a segunda.</span><br>
         <span style="color:#785df5; font-weight: bold">Sai dessa</span> de passar a vida esperando os finais de semana, seu trabalho pode ser algo que você ame fazer
-      </h1>
+      </h2>
       <h3>
         Através de um jogo do autoconhecimento que te ajudará a identificar tudo o que você precisa saber para seu bem estar profisisonal
       </h3>
-      <h1>
+      <h2>
         Você já tinha pensado nisso?
-      </h1>
+      </h2>
       <div class="button-wrapper">
         <% if user_signed_in? && current_user.journey_ended? %>
           <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
@@ -26,7 +26,7 @@
   <div class="section-a">
     <div class="division">
       <%= image_tag "divisao.png", class:"division-image" %>
-      <h1 class="col-6">Como funciona o jogo sai dessa</h1>
+      <h2 class="col-6">Como funciona o jogo sai dessa</h2>
       <h3 class="col-9 ">Você acumula pontos enquanto traça um futuro profissional feliz</h2>
     </div>
     <div class="section-a-content">
@@ -43,7 +43,7 @@
   <div class="section-c">
     <div class="division">
       <%= image_tag "divisao.png", class:"division-image" %>
-      <h1 class="col-6">Quais são os recursos do Sai Dessa</h1>
+      <h2 class="col-6">Quais são os recursos do Sai Dessa</h2>
       <h3 class="col-9 ">Tudo o que você precisa para garantir sua melhor versão profissional</h2>
     </div>
     <div class="section-c-content">
@@ -91,21 +91,21 @@
   <div class="section-b">
     <div class="division">
       <%= image_tag "divisao.png", class:"division-image"%>
-      <h1 class="col-6">Porque criamos o Sai Dessa?</h1>
+      <h2 class="col-6">Porque criamos o Sai Dessa?</h2>
       <h3 class="col-9">O Brasileiro está infeliz e não podiamos ficar só olhando</h2>
     </div>
     <div class="cards-container">
       <div class="cards-wrapper">
         <div class="card-why">
-          <h1><span style="font-size:4rem; font-weight:bold">90%<br></span> dos brasileiros estão infelizes no trabalho¹</h1>
+          <h2><span style="font-size:4rem; font-weight:bold">90%<br></span> dos brasileiros estão infelizes no trabalho¹</h2>
           <p>Pesquisas comprovam que a esmagadora maioria dos brasileiros não gostam de sua carreira</p>
         </div>
         <div class="card-why">
-          <h1><span style="font-size:4rem; font-weight:bold">60%<br></span> tem medo de mudar²</h1>
+          <h2><span style="font-size:4rem; font-weight:bold">60%<br></span> tem medo de mudar²</h2>
           <p>Mesmo infelizes, os brasileiros tem medo de mudar de emprego</p>
         </div>
         <div class="card-why">
-          <h1><span style="font-size:4rem; font-weight:bold">Depressão</span>³</h1>
+          <h2><span style="font-size:4rem; font-weight:bold">Depressão</span>³</h2>
           <p>Pesquisas comprovam que a esmagadora maioria dos brasileiros não gostam de sua carreira</p>
         </div>
       </div>
