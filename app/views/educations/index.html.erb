@@ -7,8 +7,7 @@
   </div>
   <div class="videos-wrapper">
     <% @educations.where(category: category).each do |education| %>
-        <%= cl_video_tag(education.content_url, class: "mb-4", controls: true,
-                            transformation: [height:360, width:640, crop:"pad"]) %>
+      <%= cl_video_tag(education.content_url, class: "mb-4", controls: true) %>
     <% end %>
   <% end %>
   </div>
