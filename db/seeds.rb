@@ -5,8 +5,10 @@ Education.destroy_all
 
 puts 'Instâncias destruídas'
 
-User.create(name: "a", email: "a@a", password: "123123")
-puts 'Usuário criado'
+User.create(name: "Carol", email: "carol@saidessa.live", password: "123123")
+User.create(name: "Marina", email: "marina@saidessa.live", password: "123123")
+User.create(name: "Ellen", email: "ellen@saidessa.live", password: "123123")
+puts 'Usuários criados'
 
 # ---------- INICIO DE QUESTOES
 # ---------- QUESTOES PRIMEIRA FASE
@@ -150,7 +152,7 @@ Question.create(
   right_answer: 1
 )
 Question.create(
-  content: "Tenho consiencia que a cultura organizacional deve estar alinhada com meus objetivos e valores assim minhas atitudes e postura estarão alinhadas com as da empresa e vice e versa",
+  content: "Tenho consciência que a cultura organizacional deve estar alinhada com meus objetivos e valores assim minhas atitudes e postura estarão alinhadas com as da empresa e vice e versa",
   category: "company_culture",
   right_answer: 5
 )
@@ -344,7 +346,7 @@ Education.create(
   category: "first_phase_intro"
 )
 Education.create(
-  content_url: "Sai_dessa/Segunda_Fase/C85",
+  content_url: "Sai_dessa/Segunda_Fase/C86",
   category: "second_phase_intro"
 )
 Education.create(
