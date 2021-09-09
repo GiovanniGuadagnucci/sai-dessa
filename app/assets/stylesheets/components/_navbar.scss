@@ -19,6 +19,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-right: 48px;
   img {
     width: 128px !important;
     height: 128px !important;
@@ -40,4 +41,68 @@
 
 .dropdown-item {
   line-height: 2.5;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+}
+
+// Progress
+.progress {
+  position: relative;
+  height: 66px;
+  background-color: $main;
+  mask: asset-url('path.svg') top left / cover;
+  -webkit-mask: asset-url('path.svg') top left / cover;
+  img {
+    visibility: hidden;
+  }
+}
+
+.progress-bg {
+  background-color: rgb(207, 207, 207);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  &.first_phase {
+    animation-name: toFirstPhase;
+  }
+  &.second_phase {
+    animation-name: toSecondPhase;
+  }
+  &.third_phase {
+    animation-name: toThirdPhase;
+  }
+  &.fourth_phase {
+    animation-name: toFourthPhase;
+  }
+  &.completed {
+    animation-name: toComplete;
+  }
+}
+
+@keyframes toFirstPhase {
+  from { left: 0%; }
+  to { left: 30%; }
+}
+@keyframes toSecondPhase {
+  from { left: 30%; }
+  to { left: 50%; }
+}
+@keyframes toThirdPhase {
+  from { left: 50%; }
+  to { left: 70%; }
+}
+@keyframes toFourthPhase {
+  from { left: 70%; }
+  to { left: 90%; }
+}
+@keyframes toComplete {
+  from { left: 90%; }
+  to { left: 100%; }
 }
