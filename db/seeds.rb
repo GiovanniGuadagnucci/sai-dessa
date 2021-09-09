@@ -9,8 +9,18 @@
 #    Education.create(content_url: "https://www.youtube.com/watch?v=hnp1pt8biD4", category: "#{phase}_intro")
 #  end
 
-User.create(name: "a", email: "a@a", password: "123123")
+User.destroy_all
+Question.destroy_all
+Answer.destroy_all
+Education.destroy_all
 
+puts 'Instâncias destruídas'
+
+
+User.create(name: "a", email: "a@a", password: "123123")
+puts 'Usuário criado'
+
+# ---------- INICIO DE QUESTOES
 # ---------- QUESTOES PRIMEIRA FASE
 Question.create(
   content: "Reconheço com facilidade o que sinto em diferentes situações ",
@@ -234,6 +244,9 @@ Question.create(
   right_answer: 5
 )
 
+puts "#{Question.count} questões criadas"
+
+# ---------- INICIO DE CONTEUDOS
 # ---------- CONTEUDOS PRIMEIRA FASE
 Education.create(
   content_url: "Sai_dessa/Primeira_Fase/C24",
@@ -339,3 +352,5 @@ Education.create(
   content_url: "Sai_dessa/placeholder",
   category: "fourth_phase_intro"
 )
+
+puts "#{Education.count} conteúdos criados"
