@@ -31,7 +31,7 @@ Question.create(
   right_answer: 1
 )
 Question.create(
-  content: "Preciso de ajuda de outras pessoas para decidir algo importante na minha vida mesmo que não impacte mais ninguém ",
+  content: "Preciso de ajuda de outras pessoas para decidir algo importante na minha vida mesmo que não impacte mais ninguém",
   category: "self_knowledge",
   right_answer: 1
 )
@@ -60,12 +60,12 @@ Question.create(
 
 # ---------- QUESTOES SEGUNDA FASE
 Question.create(
-  content: "Reconheço ter algumas habilidades que são inúteis para alcançar os meus objetivos pessoais",
+  content: "Minhas hard skills (habilidades tecnicas) estão alinhadas com meus objetivos pessoais",
   category: "hard_skills",
   right_answer: 5
 )
 Question.create(
-  content: "Minhas habilidades tecnicas estão alinhadas com meus objetivos pessoais",
+  content: "Reconheço ter algumas habilidades que são inuteis para alcançar os meus objetivos pessoais",
   category: "hard_skills",
   right_answer: 5
 )
@@ -81,17 +81,17 @@ Question.create(
 )
 
 Question.create(
-  content: "Minhas soft skills me ajudarão a realizar meus objetivos pessoais",
+  content: "Minhas soft skills (habilidades sociocomportamentais) me ajudarão a realizar meus objetivos pessoais",
   category: "soft_skills",
   right_answer: 5
 )
 Question.create(
-  content: "Tenho habilidades interpessoais que não se alinham com aquilo que quero",
+  content: "Reconheço ter algumas habilidades que são inuteis para alcançar os meus objetivos pessoais",
   category: "soft_skills",
   right_answer: 5
 )
 Question.create(
-  content: "Minhas qualidades pessoais são frequentemente elogiadas pelos meus colegas",
+  content: "Frequentemente recebo elogios por habilidades que reconheço como minhas qualidades",
   category: "soft_skills",
   right_answer: 5
 )
@@ -147,7 +147,7 @@ Question.create(
 Question.create(
   content: "Eu nunca parei para pensar no que é a cultura organizacional",
   category: "company_culture",
-  right_answer: 5
+  right_answer: 1
 )
 Question.create(
   content: "Tenho consiencia que a cultura organizacional deve estar alinhada com meus objetivos e valores assim minhas atitudes e postura estarão alinhadas com as da empresa e vice e versa",
@@ -157,7 +157,7 @@ Question.create(
 Question.create(
   content: "Na minha opinião a cultura da empresa não influencia em nada no meu dia a dia",
   category: "company_culture",
-  right_answer: 5
+  right_answer: 1
 )
 Question.create(
   content: "A forma como a empresa trata o colaborador é parte da cultura organizacional",
@@ -178,7 +178,7 @@ Question.create(
 Question.create(
   content: "Eu não me importo em onde uma empresa quer chegar, trabalho nela mesmo que ela esteja indo para um lugar que não concordo",
   category: "company_values",
-  right_answer: 5
+  right_answer: 1
 )
 Question.create(
   content: "Missão, visão e valores demonstram como é a sua lógica de trabalho. Isso sim muito me interessa",
