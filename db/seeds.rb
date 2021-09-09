@@ -9,7 +9,17 @@
 #    Education.create(content_url: "https://www.youtube.com/watch?v=hnp1pt8biD4", category: "#{phase}_intro")
 #  end
 
+User.destroy_all
+Question.destroy_all
+Answer.destroy_all
+Education.destroy_all
+
+puts 'Instâncias destruídas'
+
+
 User.create(name: "a", email: "a@a", password: "123123")
+puts 'Usuário criado'
+
 
 Question.create(content: "Reconheço com facilidade o que sinto em diferentes situações ", category: "self_knowledge", right_answer: 5)
 Question.create(content: "Em situações de conflito permaneço calmo", category: "self_knowledge", right_answer: 5)
@@ -65,6 +75,7 @@ Question.create(content: "Identifico com facilidade pessoas que estão no cargo 
 Question.create(content: "Sei quais são as habilidades técnicas que preciso desenvolver", category: "new_hard_skills", right_answer: 5)
 Question.create(content: "Reconheço as qualidades interpessoais que são necessárias para atingir meus objetivos", category: "new_soft_skills", right_answer: 5)
 
+puts "#{Question.count} questões criadas"
 
 
 Education.create(content_url: "Sai_dessa/Primeira_Fase/C24", category: "self_knowledge")
@@ -95,3 +106,5 @@ Education.create(content_url: "Sai_dessa/Primeira_Fase/C24", category: "first_ph
 Education.create(content_url: "Sai_dessa/Segunda_Fase/C85", category: "second_phase_intro")
 Education.create(content_url: "Sai_dessa/Terceira_Fase/C116", category: "third_phase_intro")
 Education.create(content_url: "Sai_dessa/placeholder", category: "fourth_phase_intro")
+
+puts "#{Education.count} conteúdos criados"
