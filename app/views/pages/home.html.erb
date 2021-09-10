@@ -15,7 +15,7 @@
         <% if user_signed_in? && current_user.journey_ended? %>
           <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
         <% else %>
-          <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+          <%= link_to "Quero começar a jogar", fase_path, class: "btn-app next-step" %>
         <% end %>
       </div>
     </div>
@@ -36,7 +36,7 @@
       <% if user_signed_in? && current_user.journey_ended? %>
         <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
       <% else %>
-        <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+        <%= link_to "Quero começar a jogar", fase_path, class: "btn-app next-step" %>
       <% end %>
     </div>
   </div>
@@ -120,7 +120,7 @@
         <% if user_signed_in? && current_user.journey_ended? %>
           <%= link_to "Curtiu o game?", jornada_final_path, class: "btn-app next-step" %>
         <% else %>
-          <%= link_to "Quero comerçar a jogar", fase_path, class: "btn-app next-step" %>
+          <%= link_to "Quero começar a jogar", fase_path, class: "btn-app next-step" %>
         <% end %>
       </div>
     </div>
