@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
       @next_path = { text: "Eu Juro! Bora pro teste!", path: nextstep_path }
     else
       @questions = Question.where(category: current_user.undone_categories)
-      @next_path = { text: "Essas são minhas repostas", path: nextstep_path }
+      @next_path = { text: "Essas são minhas respostas", path: nextstep_path }
     end
   end
 

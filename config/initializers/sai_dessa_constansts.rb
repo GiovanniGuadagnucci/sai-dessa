@@ -35,9 +35,9 @@ SD_DESCRIPTION = {
                       "hard_skills_icon" => "<i class='fas fa-laptop-code'></i>",
                       "soft_skills" => "Conheço minhas soft skills?",
                       "soft_skills_icon" => "<i class='fas fa-users'></i>",
-                      "strong_points" => "Tenho na ponta da lingua as meus pontos fracos?",
+                      "strong_points" => "Tenho na ponta da lingua as meus pontos fortes?",
                       "strong_points_icon" => "<i class='fas fa-angle-double-up'></i>",
-                      "week_points" => "Tenho na ponta da lingua as meus pontos fortes?",
+                      "week_points" => "Tenho na ponta da lingua as meus pontos fracos?",
                       "week_points_icon" => "<i class='fas fa-angle-double-down'></i>"
                     }
   },
@@ -60,7 +60,7 @@ SD_DESCRIPTION = {
                       "new_hard_skills" => "Sei o que tecnicamente tenho que desenvolver?",
                       "new_hard_skills_icon" => "<i class='fas fa-thumbs-up'></i>",
                       "new_soft_skills" => "Tenho todas as caracteristicas para o cargo?",
-                      "new_soft_skills_icon" => "<i class='far  fa-brain'></i>"
+                      "new_soft_skills_icon" => "<i class='fas fa-brain'></i>"
                     }
   }
  }
