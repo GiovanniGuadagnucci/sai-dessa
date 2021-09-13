@@ -2,15 +2,30 @@
 <div class="container-app">
   <div class="title-wrapper">
     <h1>Videos Educativos</h1>
-  <% @categories.each do |category| %>
-    <h2>Esse vídeo é sobre <%= translate(category) %></h2>
   </div>
-  <div class="videos-wrapper">
-    <% @educations.where(category: category).each do |education| %>
-      <%= cl_video_tag(education.content_url, class: "mb-4", controls: true) %>
-    <% end %>
-  <% end %>
+
+  <div data-controller="carousel" class="swiper-container"
+      data-carousel-options-value='{
+      "pagination": { "el": ".swiper-pagination",
+                      "dynamicBullets": "true" },
+      "navigation": { "nextEl": ".swiper-button-next",
+                      "prevEl": ".swiper-button-prev"}}'>
+    <div class="swiper-wrapper">
+      <% @categories.each do |category| %>
+        <% @educations.where(category: category).each do |education| %>
+          <div class="swiper-slide"><%= cl_video_tag(education.content_url, source_types: "mp4", controls: true)%></div>
+        <% end %>
+      <% end %>
+    </div>
+    <!-- Pagination (... or 1/10 or progress bar) -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Navigation buttons (< >) -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
+
+
   <div class="button-wrapper">
     <%= link_to @btn_text, questoes_path, class: "btn-app next-step" %>
     <% unless current_user.phase_not_started? %>
