@@ -22,4 +22,8 @@ class PagesController < ApplicationController
   def jornada_final
     redirect_to fase_path unless current_user.journey_ended?
   end
+
+  def perfil
+    #@percentage_questions_done = (User.joins(:answers).where(id: current_user).size * 100)/Question.all.size
+  end
 end

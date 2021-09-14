@@ -28,4 +28,8 @@ class QuestionsController < ApplicationController
     else redirect_to fim_path
     end
   end
+
+  def all_questions
+    @questions = Question.all.size
+  end
 end

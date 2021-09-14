@@ -16,6 +16,10 @@ class User < ApplicationRecord
     end
   end
 
+  def percentage_questions_done
+    (User.joins(:answers).where(id: id).size * 100) / Question.all.size
+  end
+
   def phase_not_started?
     score[current_phase].empty? || score[current_phase].reject { |cat| cat.include?('oath') }.values.all?(0)
   end

@@ -18,7 +18,8 @@
 .fim-banner {
   background-image: linear-gradient(180deg, $main-brown, #fff);
 }
-.end-jorney {
+.end-jorney,
+.perfil {
   background-image: linear-gradient(180deg, $main, #fff);
 }
 
@@ -48,6 +49,7 @@
 .person {
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .fim {

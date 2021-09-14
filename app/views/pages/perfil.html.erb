@@ -1,0 +1,21 @@
+<div class="pages-banner perfil"></div>
+<div class="container-app">
+  <div class="hero-wrapper">
+    <div class="hero-avatar">
+      <img
+        src="https://uploads-ssl.webflow.com/61361501d57d475b64696154/6140ecc2146b2b5075c7a42a_entj-commander-male.svg"
+        loading="lazy"
+        width="300"
+        height="300"
+        alt=""
+        class="image"
+      />
+    </div>
+    <div class="hero-content">
+      <h1>Hello, <%= current_user.name.capitalize() %></h1>
+      <h2>Voce está na <%= translate(current_user.current_phase) %></h2>
+      <h2>Voce já passou por <%= current_user.percentage_questions_done %>% das afirmaçoes</h2>
+      <h2>Nesta fase ainda te falta passar pelas categorias de <%= current_user.undone_categories.map {|category| translate(category)}.to_sentence(last_word_connector: " e ") %> </h2>
+    </div>
+  </div>
+</div>

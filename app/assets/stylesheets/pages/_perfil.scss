@@ -1,0 +1,21 @@
+.hero-wrapper {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0px;
+  padding-left: 0px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  .hero-avatar {
+    display: flex;
+    align-items: center;
+    .image {
+      margin-right: 40px;
+    }
+  }
+  .hero-content {
+    justify-content: space-around;
+    padding: 0 200px;
+  }
+}

@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get '/questoes', to: 'questions#index'
   post '/nextstep', to: 'questions#nextstep'
   get '/jornada_final', to: 'pages#jornada_final'
+  get '/perfil', to: 'pages#perfil'
 end
